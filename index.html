@@ -1,0 +1,3087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranay Sondkar - Project Manager</title>
+    <meta name="description" content="Portfolio of Pranay Sondkar - Project Manager specializing in process automation, GRC operations, and cross-functional leadership.">
+
+    <!-- Fonts: Apple system stack + fallback to clean sans-serifs -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', 'Segoe UI', sans-serif;
+            --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', 'Segoe UI', sans-serif;
+            --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+
+            --white: #ffffff;
+            --black: #000000;
+            --gray-50: #fafafa;
+            --gray-100: #f5f5f7;
+            --gray-200: #e8e8ed;
+            --gray-300: #d2d2d7;
+            --gray-400: #aeaeb2;
+            --gray-500: #86868b;
+            --gray-600: #6e6e73;
+            --gray-700: #48484a;
+            --gray-800: #2c2c2e;
+            --gray-900: #1c1c1e;
+
+            --radius: 38px;
+            --radius-sm: 20px;
+            --radius-xs: 12px;
+
+            --glass-bg: rgba(255, 255, 255, 0.72);
+            --glass-border: rgba(255, 255, 255, 0.5);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+            --glass-blur: blur(40px);
+
+            --transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* ============ RESET & BASE ============ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--gray-900);
+            background: var(--gray-50);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* ============ NAVIGATION ============ */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 16px 40px;
+            transition: all 0.5s var(--transition);
+        }
+
+        .nav.scrolled {
+            padding: 10px 40px;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 32px;
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius);
+            box-shadow: var(--glass-shadow);
+            transition: all 0.5s var(--transition);
+        }
+
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: var(--black);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-link {
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--gray-600);
+            padding: 8px 18px;
+            border-radius: 100px;
+            transition: all 0.3s var(--transition);
+            cursor: pointer;
+        }
+
+        .nav-link:hover {
+            color: var(--black);
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-link.active {
+            color: var(--white);
+            background: var(--black);
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--white);
+            background: var(--black);
+            padding: 10px 24px;
+            border-radius: 100px;
+            transition: all 0.3s var(--transition);
+            cursor: pointer;
+        }
+
+        .nav-cta:hover {
+            background: var(--gray-800);
+            transform: scale(1.03);
+        }
+
+        .nav-cta svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-toggle svg {
+            width: 24px;
+            height: 24px;
+            color: var(--black);
+        }
+
+        /* ============ HERO ============ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 120px 40px 80px;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.15;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .hero-orb-1 {
+            width: 600px;
+            height: 600px;
+            background: var(--black);
+            top: -200px;
+            right: -100px;
+            animation-delay: 0s;
+        }
+
+        .hero-orb-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--gray-500);
+            bottom: -100px;
+            left: -100px;
+            animation-delay: -7s;
+        }
+
+        .hero-orb-3 {
+            width: 300px;
+            height: 300px;
+            background: var(--gray-400);
+            top: 50%;
+            left: 50%;
+            animation-delay: -14s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -30px) scale(1.05); }
+            50% { transform: translate(-20px, 20px) scale(0.95); }
+            75% { transform: translate(15px, 15px) scale(1.02); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--gray-600);
+            margin-bottom: 32px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s var(--transition) 0.2s forwards;
+        }
+
+        .hero-badge svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #34c759;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            line-height: 1.05;
+            color: var(--black);
+            margin-bottom: 24px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s var(--transition) 0.4s forwards;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-display);
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            font-weight: 400;
+            color: var(--gray-500);
+            line-height: 1.7;
+            max-width: 680px;
+            margin: 0 auto 48px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s var(--transition) 0.6s forwards;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s var(--transition) 0.8s forwards;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: var(--black);
+            color: var(--white);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-radius: 100px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s var(--transition);
+        }
+
+        .btn-primary:hover {
+            background: var(--gray-800);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-primary svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            color: var(--black);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: all 0.3s var(--transition);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .btn-secondary svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--gray-400);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0;
+            animation: fadeUp 0.8s var(--transition) 1.2s forwards;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--gray-300), transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% { transform: scaleY(1); opacity: 1; }
+            50% { transform: scaleY(0.5); opacity: 0.3; }
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ============ SECTIONS ============ */
+        section {
+            padding: 120px 40px;
+            position: relative;
+        }
+
+        .section-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--gray-500);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .section-label svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            color: var(--black);
+            margin-bottom: 20px;
+        }
+
+        .section-desc {
+            font-size: 1.1rem;
+            color: var(--gray-500);
+            line-height: 1.7;
+            max-width: 650px;
+            margin-bottom: 64px;
+        }
+
+        /* ============ ABOUT ============ */
+        .about-section {
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .about-philosophy {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.4;
+            color: var(--black);
+            margin-bottom: 32px;
+        }
+
+        .about-text {
+            font-size: 1.05rem;
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            margin-top: 48px;
+        }
+
+        .about-stat {
+            text-align: center;
+            padding: 32px 16px;
+            border-right: 1px solid var(--gray-200);
+        }
+
+        .about-stat:last-child {
+            border-right: none;
+        }
+
+        .about-stat-number {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: var(--black);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .about-stat-label {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            font-weight: 500;
+        }
+
+        .about-values {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .value-card {
+            padding: 32px;
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-sm);
+            transition: all 0.4s var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+        }
+
+        .value-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--black);
+            color: var(--white);
+            border-radius: var(--radius-xs);
+            margin-bottom: 20px;
+        }
+
+        .value-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .value-title {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 10px;
+        }
+
+        .value-desc {
+            font-size: 0.95rem;
+            color: var(--gray-600);
+            line-height: 1.65;
+        }
+
+        /* ============ JOURNEY / EXPERIENCE ============ */
+        .journey-section {
+            background: var(--gray-50);
+        }
+
+        .journey-timeline {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .journey-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 48px;
+            transition: all 0.5s var(--transition);
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .journey-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--black);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s var(--transition);
+        }
+
+        .journey-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .journey-card:hover {
+            border-color: var(--gray-300);
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.06);
+            transform: translateY(-4px);
+        }
+
+        .journey-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .journey-company {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--black);
+        }
+
+        .journey-role {
+            font-size: 1rem;
+            color: var(--gray-500);
+            margin-top: 4px;
+        }
+
+        .journey-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .journey-date {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            padding: 6px 14px;
+            background: var(--gray-100);
+            border-radius: 100px;
+        }
+
+        .journey-date svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .journey-location {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: var(--gray-500);
+        }
+
+        .journey-location svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .journey-story {
+            font-size: 1.05rem;
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 32px;
+            max-width: 800px;
+        }
+
+        .journey-story .highlight {
+            color: var(--black);
+            font-weight: 500;
+        }
+
+        .journey-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+
+        .metric-card {
+            padding: 24px;
+            background: var(--gray-50);
+            border-radius: var(--radius-sm);
+            text-align: center;
+            transition: all 0.3s var(--transition);
+        }
+
+        .metric-card:hover {
+            background: var(--gray-100);
+        }
+
+        .metric-value {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--black);
+            margin-bottom: 4px;
+        }
+
+        .metric-label {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            font-weight: 500;
+        }
+
+        .journey-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 24px;
+        }
+
+        .journey-tag {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--gray-600);
+            padding: 6px 16px;
+            background: var(--gray-100);
+            border-radius: 100px;
+            transition: all 0.3s var(--transition);
+        }
+
+        .journey-tag:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        /* ============ IMPACT SECTION (Charts) ============ */
+        .impact-section {
+            background: var(--white);
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .impact-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 40px;
+            transition: all 0.4s var(--transition);
+        }
+
+        .impact-card:hover {
+            border-color: var(--gray-300);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.06);
+        }
+
+        .impact-card-title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .impact-card-desc {
+            font-size: 0.9rem;
+            color: var(--gray-500);
+            margin-bottom: 32px;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 240px;
+        }
+
+        /* Bar chart */
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 200px;
+            padding-top: 20px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .bar-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+        }
+
+        .bar {
+            width: 48px;
+            background: var(--black);
+            border-radius: 8px 8px 0 0;
+            transition: all 1s var(--transition);
+            position: relative;
+        }
+
+        .bar.before {
+            background: var(--gray-300);
+        }
+
+        .bar-label {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--gray-500);
+            text-align: center;
+        }
+
+        .bar-value {
+            font-family: var(--font-display);
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--black);
+            position: absolute;
+            top: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+
+        /* Donut chart */
+        .donut-chart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .donut-svg {
+            width: 180px;
+            height: 180px;
+            transform: rotate(-90deg);
+        }
+
+        .donut-track {
+            fill: none;
+            stroke: var(--gray-200);
+            stroke-width: 16;
+        }
+
+        .donut-fill {
+            fill: none;
+            stroke: var(--black);
+            stroke-width: 16;
+            stroke-linecap: round;
+            stroke-dasharray: 0 377;
+            transition: stroke-dasharray 1.5s var(--transition);
+        }
+
+        .donut-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .donut-center .value {
+            font-family: var(--font-display);
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--black);
+            line-height: 1;
+        }
+
+        .donut-center .label {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+        }
+
+        .donut-legend {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: var(--gray-600);
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        /* Line chart */
+        .line-chart-svg {
+            width: 100%;
+            height: 200px;
+        }
+
+        .impact-card-full {
+            grid-column: 1 / -1;
+        }
+
+        /* Horizontal bar */
+        .h-bar-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .h-bar-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .h-bar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .h-bar-label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--gray-700);
+        }
+
+        .h-bar-value {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--black);
+        }
+
+        .h-bar-track {
+            width: 100%;
+            height: 12px;
+            background: var(--gray-200);
+            border-radius: 100px;
+            overflow: hidden;
+        }
+
+        .h-bar-fill {
+            height: 100%;
+            background: var(--black);
+            border-radius: 100px;
+            transition: width 1.2s var(--transition);
+            width: 0;
+        }
+
+        /* ============ LESSONS ============ */
+        .lessons-section {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .lessons-section .section-label {
+            color: var(--gray-400);
+        }
+
+        .lessons-section .section-title {
+            color: var(--white);
+        }
+
+        .lessons-section .section-desc {
+            color: var(--gray-400);
+        }
+
+        .lessons-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .lesson-card {
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius);
+            transition: all 0.4s var(--transition);
+        }
+
+        .lesson-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .lesson-number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.1);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .lesson-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .lesson-text {
+            font-size: 0.95rem;
+            color: var(--gray-400);
+            line-height: 1.7;
+        }
+
+        /* ============ TOOLKIT ============ */
+        .toolkit-section {
+            background: var(--gray-50);
+        }
+
+        .toolkit-categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .toolkit-category {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 40px;
+            transition: all 0.4s var(--transition);
+        }
+
+        .toolkit-category:hover {
+            border-color: var(--gray-300);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.06);
+        }
+
+        .toolkit-category-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gray-100);
+            border-radius: var(--radius-xs);
+            margin-bottom: 24px;
+        }
+
+        .toolkit-category-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--black);
+        }
+
+        .toolkit-category-title {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 20px;
+        }
+
+        .toolkit-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .toolkit-item {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--gray-600);
+            padding: 8px 16px;
+            background: var(--gray-50);
+            border-radius: 100px;
+            transition: all 0.3s var(--transition);
+        }
+
+        .toolkit-item:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        /* ============ AI & ENGINEERING ============ */
+        .ai-section {
+            background: var(--white);
+            overflow: hidden;
+        }
+
+        .ai-hero-statement {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 3vw, 2.25rem);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.4;
+            color: var(--black);
+            max-width: 800px;
+            margin-bottom: 64px;
+        }
+
+        .ai-hero-statement .ai-accent {
+            color: var(--gray-400);
+        }
+
+        .evolution-track {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .evolution-track::before {
+            content: '';
+            position: absolute;
+            top: 36px;
+            left: 5%;
+            right: 5%;
+            height: 2px;
+            background: linear-gradient(to right, var(--gray-300), var(--black));
+        }
+
+        .evo-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding: 0 12px;
+        }
+
+        .evo-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--white);
+            border: 3px solid var(--gray-300);
+            margin-bottom: 20px;
+            z-index: 1;
+            transition: all 0.5s var(--transition);
+        }
+
+        .evo-node:last-child .evo-dot {
+            border-color: var(--black);
+            background: var(--black);
+            box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .evo-node:nth-child(3) .evo-dot {
+            border-color: var(--gray-600);
+            background: var(--gray-600);
+        }
+
+        .evo-node:nth-child(2) .evo-dot {
+            border-color: var(--gray-400);
+            background: var(--gray-400);
+        }
+
+        .evo-year {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--gray-400);
+            margin-bottom: 8px;
+            letter-spacing: 0.05em;
+        }
+
+        .evo-title {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 6px;
+        }
+
+        .evo-desc {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            line-height: 1.5;
+            max-width: 180px;
+        }
+
+        .pipeline-container {
+            margin-bottom: 80px;
+        }
+
+        .pipeline-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .pipeline-subtitle {
+            font-size: 0.95rem;
+            color: var(--gray-500);
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .pipeline {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            position: relative;
+        }
+
+        .pipeline-step {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-sm);
+            padding: 28px 20px;
+            text-align: center;
+            position: relative;
+            transition: all 0.4s var(--transition);
+            cursor: default;
+        }
+
+        .pipeline-step:hover {
+            border-color: var(--black);
+            background: var(--white);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+        }
+
+        .pipeline-step.ai-enhanced {
+            background: var(--black);
+            border-color: var(--black);
+            color: var(--white);
+        }
+
+        .pipeline-step.ai-enhanced:hover {
+            background: var(--gray-800);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+        }
+
+        .pipeline-step.ai-enhanced .pipe-label,
+        .pipeline-step.ai-enhanced .pipe-title,
+        .pipeline-step.ai-enhanced .pipe-desc {
+            color: var(--white);
+        }
+
+        .pipeline-step.ai-enhanced .pipe-label {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .pipeline-step.ai-enhanced .pipe-desc {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .pipe-icon {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            background: var(--gray-100);
+            border-radius: var(--radius-xs);
+        }
+
+        .pipeline-step.ai-enhanced .pipe-icon {
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .pipe-icon svg {
+            width: 22px;
+            height: 22px;
+            color: var(--black);
+        }
+
+        .pipeline-step.ai-enhanced .pipe-icon svg {
+            color: var(--white);
+        }
+
+        .pipe-label {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+
+        .pipe-title {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 6px;
+        }
+
+        .pipe-desc {
+            font-size: 0.78rem;
+            color: var(--gray-500);
+            line-height: 1.5;
+        }
+
+        .pipe-arrow {
+            position: absolute;
+            right: -18px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            color: var(--gray-300);
+        }
+
+        .pipe-arrow svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .pipeline-step:last-child .pipe-arrow {
+            display: none;
+        }
+
+        .pipe-ai-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 100px;
+            margin-top: 10px;
+            letter-spacing: 0.08em;
+        }
+
+        .pipe-ai-badge svg {
+            width: 10px;
+            height: 10px;
+        }
+
+        .ai-toolkit-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 80px;
+        }
+
+        .ai-tool-card {
+            padding: 36px;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            transition: all 0.4s var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ai-tool-card:hover {
+            border-color: var(--gray-300);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.06);
+            transform: translateY(-4px);
+        }
+
+        .ai-tool-card-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-xs);
+            margin-bottom: 20px;
+        }
+
+        .ai-tool-card-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--black);
+        }
+
+        .ai-tool-name {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 4px;
+        }
+
+        .ai-tool-type {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+
+        .ai-tool-desc {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        .ai-cert-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: var(--black);
+            color: var(--white);
+            font-size: 0.7rem;
+            font-weight: 600;
+            border-radius: 100px;
+            margin-top: 14px;
+            letter-spacing: 0.03em;
+        }
+
+        .ai-cert-badge svg {
+            width: 12px;
+            height: 12px;
+        }
+
+        .ai-philosophy {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .ai-phil-card {
+            padding: 40px;
+            border-radius: var(--radius);
+            transition: all 0.4s var(--transition);
+        }
+
+        .ai-phil-card.dark {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .ai-phil-card.glass {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+        }
+
+        .ai-phil-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .ai-phil-card.dark:hover {
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.2);
+        }
+
+        .ai-phil-card.glass:hover {
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+        }
+
+        .ai-phil-quote {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.45;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+
+        .ai-phil-body {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--gray-600);
+        }
+
+        .ai-phil-card.dark .ai-phil-body {
+            color: var(--gray-400);
+        }
+
+        .eng-roots {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 80px;
+        }
+
+        .eng-root-card {
+            padding: 24px;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-sm);
+            text-align: center;
+            transition: all 0.3s var(--transition);
+        }
+
+        .eng-root-card:hover {
+            border-color: var(--black);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+        }
+
+        .eng-root-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--white);
+            border-radius: var(--radius-xs);
+            margin: 0 auto 14px;
+        }
+
+        .eng-root-icon svg {
+            width: 20px;
+            height: 20px;
+            color: var(--black);
+        }
+
+        .eng-root-title {
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 4px;
+        }
+
+        .eng-root-desc {
+            font-size: 0.78rem;
+            color: var(--gray-500);
+            line-height: 1.5;
+        }
+
+        /* ============ EDUCATION ============ */
+        .education-section {
+            background: var(--white);
+        }
+
+        .edu-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .edu-card {
+            padding: 48px;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            transition: all 0.4s var(--transition);
+        }
+
+        .edu-card:hover {
+            border-color: var(--gray-300);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.06);
+        }
+
+        .edu-card.primary {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .edu-degree {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .edu-school {
+            font-size: 1rem;
+            color: var(--gray-500);
+            margin-bottom: 4px;
+        }
+
+        .edu-date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--gray-400);
+            margin-bottom: 20px;
+        }
+
+        .edu-highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: var(--black);
+            color: var(--white);
+            font-size: 0.85rem;
+            font-weight: 500;
+            border-radius: 100px;
+            margin-bottom: 20px;
+        }
+
+        .edu-highlight svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .edu-coursework {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .edu-course {
+            font-size: 0.8rem;
+            color: var(--gray-600);
+            padding: 6px 16px;
+            background: var(--white);
+            border-radius: 100px;
+        }
+
+        .edu-gpa-visual {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gpa-ring {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        .gpa-ring svg {
+            width: 200px;
+            height: 200px;
+            transform: rotate(-90deg);
+        }
+
+        .gpa-ring .track {
+            fill: none;
+            stroke: var(--gray-200);
+            stroke-width: 12;
+        }
+
+        .gpa-ring .fill {
+            fill: none;
+            stroke: var(--black);
+            stroke-width: 12;
+            stroke-linecap: round;
+            stroke-dasharray: 0 565;
+            transition: stroke-dasharray 1.5s var(--transition);
+        }
+
+        .gpa-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .gpa-number {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--black);
+            line-height: 1;
+        }
+
+        .gpa-label {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            margin-top: 4px;
+        }
+
+        .gpa-scholarship {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--gray-600);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .gpa-scholarship svg {
+            width: 18px;
+            height: 18px;
+            color: var(--black);
+        }
+
+        /* ============ CONTACT ============ */
+        .contact-section {
+            background: var(--gray-50);
+            text-align: center;
+        }
+
+        .contact-section .section-desc {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 20px 32px;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            transition: all 0.3s var(--transition);
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--gray-900);
+        }
+
+        .contact-card:hover {
+            border-color: var(--black);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.06);
+            transform: translateY(-4px);
+        }
+
+        .contact-card svg {
+            width: 22px;
+            height: 22px;
+            color: var(--black);
+        }
+
+        .contact-card-text {
+            text-align: left;
+        }
+
+        .contact-card-label {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .contact-card-value {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--black);
+        }
+
+        /* ============ FOOTER ============ */
+        .footer {
+            padding: 48px 40px;
+            background: var(--black);
+            color: var(--gray-400);
+            text-align: center;
+        }
+
+        .footer-text {
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .footer-text a {
+            color: var(--white);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        /* ============ SCROLL ANIMATIONS ============ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s var(--transition);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 1024px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .toolkit-categories {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .lessons-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .edu-card.primary {
+                grid-template-columns: 1fr;
+            }
+
+            .pipeline {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .pipe-arrow {
+                display: none;
+            }
+
+            .ai-toolkit-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .evolution-track {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+
+            .evolution-track::before {
+                display: none;
+            }
+
+            .eng-roots {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 80px 24px;
+            }
+
+            .nav {
+                padding: 12px 16px;
+            }
+
+            .nav-inner {
+                padding: 12px 20px;
+                border-radius: var(--radius-sm);
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: calc(100% + 12px);
+                left: 16px;
+                right: 16px;
+                background: var(--glass-bg);
+                backdrop-filter: var(--glass-blur);
+                -webkit-backdrop-filter: var(--glass-blur);
+                border: 1px solid var(--glass-border);
+                border-radius: var(--radius-sm);
+                padding: 16px;
+                box-shadow: var(--glass-shadow);
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .hero {
+                padding: 140px 24px 80px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .about-stat {
+                border-right: none;
+                border-bottom: 1px solid var(--gray-200);
+                padding: 24px;
+            }
+
+            .about-stat:last-child {
+                border-bottom: none;
+            }
+
+            .journey-card {
+                padding: 32px 24px;
+            }
+
+            .journey-header {
+                flex-direction: column;
+            }
+
+            .journey-metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .toolkit-categories {
+                grid-template-columns: 1fr;
+            }
+
+            .edu-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-cards {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .pipeline {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .ai-toolkit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ai-philosophy {
+                grid-template-columns: 1fr;
+            }
+
+            .evolution-track {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .eng-roots {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .about-philosophy {
+                font-size: 1.4rem;
+            }
+
+            .journey-metrics {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">PS</a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#journey" class="nav-link">Journey</a>
+                <a href="#impact" class="nav-link">Impact</a>
+                <a href="#lessons" class="nav-link">Lessons</a>
+                <a href="#toolkit" class="nav-link">Toolkit</a>
+                <a href="#ai" class="nav-link">AI</a>
+                <a href="#education" class="nav-link">Education</a>
+            </div>
+
+            <a href="https://www.linkedin.com/in/pranaysondkar" target="_blank" rel="noopener" class="nav-cta">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <div class="status-dot"></div>
+                Open to opportunities
+            </div>
+
+            <h1 class="hero-title">
+                Pranay Sondkar
+            </h1>
+
+            <p class="hero-subtitle">
+                I help organizations deliver complex projects without the usual chaos. By building systems that keep teams aligned, accountable, and moving forward.
+            </p>
+
+            <div class="hero-actions">
+                <a href="https://www.linkedin.com/in/pranaysondkar" target="_blank" rel="noopener" class="btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    Connect on LinkedIn
+                </a>
+                <a href="#journey" class="btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    View my journey
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            Scroll
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="about-section" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="reveal">
+                    <span class="section-label">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        About
+                    </span>
+
+                    <p class="about-philosophy">
+                        Tools don't solve project management problems. Clarity does.
+                    </p>
+
+                    <p class="about-text">
+                        I grew up in Mumbai, studied electronics, worked in banking, shipped patent research, moved to Boston for grad school, then walked into a cybersecurity team and asked if I could automate the thing nobody wanted to touch.
+                    </p>
+
+                    <p class="about-text">
+                        That thread connects everything I do: find the messy, manual, "we've always done it this way" process and build something better. Not with the flashiest technology, but with the right one. The kind of solution that works when you leave the room.
+                    </p>
+
+                    <p class="about-text">
+                        I am a project manager with 4+ years of experience across financial services, technology, and GRC operations. Certified ScrumMaster. MS in Project Management from Northeastern University, 3.9 GPA. Based in Austin, TX.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <div class="about-stat-number">4+</div>
+                            <div class="about-stat-label">Years experience</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="about-stat-number">70+</div>
+                            <div class="about-stat-label">Team members led</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="about-stat-number">$5M+</div>
+                            <div class="about-stat-label">Portfolios managed</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-values reveal">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+                        </div>
+                        <div class="value-title">Earn trust before you innovate</div>
+                        <div class="value-desc">My manager at State Street did not trust my idea. She trusted that I would handle my responsibilities first. That is how you earn the right to build something new.</div>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <div class="value-title">Feedback loops beat assumptions</div>
+                        <div class="value-desc">Some of the best features I ever shipped came from "never knew we needed this until we saw it" conversations. Listen more. Assume less.</div>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
+                        </div>
+                        <div class="value-title">Give more than you take</div>
+                        <div class="value-desc">Every team I have worked with invested in me. The automation I built at State Street was not a resume line. It was a thank you.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== JOURNEY ==================== -->
+    <section class="journey-section" id="journey">
+        <div class="section-container">
+            <span class="section-label reveal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                Journey
+            </span>
+            <h2 class="section-title reveal">Where I have been.<br>What I have built.</h2>
+            <p class="section-desc reveal">Each role taught me something that metrics alone cannot capture. Here are the stories behind the numbers.</p>
+
+            <div class="journey-timeline">
+
+                <!-- State Street -->
+                <div class="journey-card reveal">
+                    <div class="journey-header">
+                        <div>
+                            <div class="journey-company">State Street Corporation</div>
+                            <div class="journey-role">Operations Manager, Cybersecurity GRC</div>
+                        </div>
+                        <div class="journey-meta">
+                            <span class="journey-date">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                Jan 2025 - Jun 2025
+                            </span>
+                            <span class="journey-location">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Boston, MA
+                            </span>
+                        </div>
+                    </div>
+
+                    <p class="journey-story">
+                        When I joined State Street's GRC team, the resource reconciliation process was <span class="highlight">ripe for automation</span>. Data scattered across multiple sources, no single source of truth, and manual work consuming 50+ hours every month. From day one, the team went out of their way to teach me everything they could. I did not want this to be a "just take" experience. I wanted to give something back.
+                    </p>
+                    <p class="journey-story">
+                        So I pitched an idea to my manager in my <span class="highlight">first month</span>. Her response: "You can work on it, if you learn the daily operations first, make them your own, and do not let this distract from the core work." Fair deal. I mapped the entire process with flowcharts, found the inefficiencies, built a Kanban board to track both daily work and the automation features. I chose <span class="highlight">low-code over Python and SQL</span> because the real question was not "what is the most impressive solution?" but "what will still work after I leave?"
+                    </p>
+                    <p class="journey-story">
+                        The result: 93% reduction in manual effort. $48K annual savings. Completed ahead of schedule. Full documentation so it would not break after I left. The tool worked. But the <span class="highlight">trust we built together</span> is what made it possible.
+                    </p>
+
+                    <div class="journey-metrics">
+                        <div class="metric-card">
+                            <div class="metric-value">93%</div>
+                            <div class="metric-label">Manual effort eliminated</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">$48K</div>
+                            <div class="metric-label">Annual savings</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">70+</div>
+                            <div class="metric-label">Team members</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">24+</div>
+                            <div class="metric-label">C-suite reviews</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">$2M+</div>
+                            <div class="metric-label">Investment influenced</div>
+                        </div>
+                    </div>
+
+                    <div class="journey-tags">
+                        <span class="journey-tag">Power Platform</span>
+                        <span class="journey-tag">Jira Administration</span>
+                        <span class="journey-tag">GRC</span>
+                        <span class="journey-tag">Change Management</span>
+                        <span class="journey-tag">Executive Communication</span>
+                        <span class="journey-tag">Agile</span>
+                    </div>
+                </div>
+
+                <!-- Researchwire -->
+                <div class="journey-card reveal">
+                    <div class="journey-header">
+                        <div>
+                            <div class="journey-company">Researchwire Knowledge Solutions</div>
+                            <div class="journey-role">Project Manager</div>
+                        </div>
+                        <div class="journey-meta">
+                            <span class="journey-date">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                Aug 2021 - Jun 2023
+                            </span>
+                            <span class="journey-location">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Mumbai, India
+                            </span>
+                        </div>
+                    </div>
+
+                    <p class="journey-story">
+                        This is where I learned to <span class="highlight">juggle without dropping</span>. Managing 8 to 12 concurrent projects with a combined budget of over $5M taught me that the hardest part of project management is not planning. It is prioritization. Deciding what gets your attention right now, and what can wait.
+                    </p>
+                    <p class="journey-story">
+                        When I started, vendor on-time delivery was at 65%. I did not send threatening emails or escalate. I created <span class="highlight">clarity</span>: clear acceptance criteria before work began, QA checkpoints at 25%, 50%, and 75% instead of just at delivery, and I made vendors part of the solution instead of just executors. Delivery climbed to 92%. Most vendor problems are not vendor problems. They are communication problems.
+                    </p>
+                    <p class="journey-story">
+                        I also learned how to handle scope creep. By implementing a formal change control process and resolving inter-departmental conflicts early, I <span class="highlight">reduced scope creep by 45%</span> and boosted stakeholder satisfaction by 25%. The lesson: boundaries are not about saying no. They are about saying yes to the right things.
+                    </p>
+
+                    <div class="journey-metrics">
+                        <div class="metric-card">
+                            <div class="metric-value">$5M+</div>
+                            <div class="metric-label">Portfolio managed</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">65 to 92%</div>
+                            <div class="metric-label">Vendor delivery</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">45%</div>
+                            <div class="metric-label">Scope creep reduced</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">20%</div>
+                            <div class="metric-label">ROI improvement</div>
+                        </div>
+                    </div>
+
+                    <div class="journey-tags">
+                        <span class="journey-tag">Scrum</span>
+                        <span class="journey-tag">Vendor Management</span>
+                        <span class="journey-tag">Tableau</span>
+                        <span class="journey-tag">Change Control</span>
+                        <span class="journey-tag">Risk Management</span>
+                        <span class="journey-tag">Budget Management</span>
+                    </div>
+                </div>
+
+                <!-- TCS -->
+                <div class="journey-card reveal">
+                    <div class="journey-header">
+                        <div>
+                            <div class="journey-company">Tata Consultancy Services</div>
+                            <div class="journey-role">Systems Engineer</div>
+                        </div>
+                        <div class="journey-meta">
+                            <span class="journey-date">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                Jun 2019 - Aug 2021
+                            </span>
+                            <span class="journey-location">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Mumbai, India
+                            </span>
+                        </div>
+                    </div>
+
+                    <p class="journey-story">
+                        Where it all started. <span class="highlight">$100M+ in daily transactions</span> flowing through the banking applications I helped build and maintain. This is where I learned that systems thinking is not optional when real money is on the line. Every deployment decision, every sprint, every hotfix carried weight because downtime was not an inconvenience. It was a financial event.
+                    </p>
+                    <p class="journey-story">
+                        I led a 6-person engineering team through the full software development lifecycle of mission-critical banking applications. I coached the team through Scrum adoption, increasing sprint velocity by 28%. I automated SQL-based reporting, cutting manual reporting by 96%. And I learned the most important lesson of my career: <span class="highlight">when the stakes are high, process is not bureaucracy. Process is protection.</span>
+                    </p>
+
+                    <div class="journey-metrics">
+                        <div class="metric-card">
+                            <div class="metric-value">$100M+</div>
+                            <div class="metric-label">Daily transactions</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">28%</div>
+                            <div class="metric-label">Sprint velocity increase</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">96%</div>
+                            <div class="metric-label">Manual reporting cut</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">15%</div>
+                            <div class="metric-label">CSAT improvement</div>
+                        </div>
+                    </div>
+
+                    <div class="journey-tags">
+                        <span class="journey-tag">Banking</span>
+                        <span class="journey-tag">SDLC</span>
+                        <span class="journey-tag">SQL</span>
+                        <span class="journey-tag">Java</span>
+                        <span class="journey-tag">Scrum Coaching</span>
+                        <span class="journey-tag">Regulatory Compliance</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== IMPACT ==================== -->
+    <section class="impact-section" id="impact">
+        <div class="section-container">
+            <span class="section-label reveal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                Impact
+            </span>
+            <h2 class="section-title reveal">Numbers tell part of the story.</h2>
+            <p class="section-desc reveal">The charts below visualize the measurable outcomes across my career. Each data point represents a real problem that was solved.</p>
+
+            <div class="impact-grid">
+
+                <!-- Automation Before/After -->
+                <div class="impact-card reveal">
+                    <div class="impact-card-title">Automation Impact at State Street</div>
+                    <div class="impact-card-desc">Manual effort before and after Power Platform implementation</div>
+                    <div class="chart-container">
+                        <div class="bar-chart" id="automationChart">
+                            <div class="bar-group">
+                                <div class="bar before" data-height="180" style="height: 0px;">
+                                    <span class="bar-value">50+ hrs</span>
+                                </div>
+                                <div class="bar-label">Before</div>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar" data-height="14" style="height: 0px;">
+                                    <span class="bar-value">~2 hrs</span>
+                                </div>
+                                <div class="bar-label">After</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Efficiency Donut -->
+                <div class="impact-card reveal">
+                    <div class="impact-card-title">Efficiency Gains</div>
+                    <div class="impact-card-desc">Percentage of manual work eliminated through automation</div>
+                    <div class="chart-container">
+                        <div class="donut-chart">
+                            <div style="position: relative;">
+                                <svg class="donut-svg" viewBox="0 0 140 140">
+                                    <circle class="donut-track" cx="70" cy="70" r="60"/>
+                                    <circle class="donut-fill" id="donutFill" cx="70" cy="70" r="60" data-percent="93"/>
+                                </svg>
+                                <div class="donut-center">
+                                    <div class="value" id="donutValue">0%</div>
+                                    <div class="label">eliminated</div>
+                                </div>
+                            </div>
+                            <div class="donut-legend">
+                                <div class="legend-item">
+                                    <div class="legend-dot" style="background: var(--black);"></div>
+                                    Automated (93%)
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-dot" style="background: var(--gray-200);"></div>
+                                    Strategic work (7%)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vendor Delivery -->
+                <div class="impact-card reveal">
+                    <div class="impact-card-title">Vendor On-Time Delivery</div>
+                    <div class="impact-card-desc">Before and after implementing QA checkpoints at Researchwire</div>
+                    <div class="h-bar-chart" id="vendorChart">
+                        <div class="h-bar-group">
+                            <div class="h-bar-header">
+                                <span class="h-bar-label">Before (no checkpoints)</span>
+                                <span class="h-bar-value">65%</span>
+                            </div>
+                            <div class="h-bar-track">
+                                <div class="h-bar-fill" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div class="h-bar-group">
+                            <div class="h-bar-header">
+                                <span class="h-bar-label">After (QA at 25/50/75%)</span>
+                                <span class="h-bar-value">92%</span>
+                            </div>
+                            <div class="h-bar-track">
+                                <div class="h-bar-fill" data-width="92"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Career Metrics Overview -->
+                <div class="impact-card reveal">
+                    <div class="impact-card-title">Key Metrics Across Roles</div>
+                    <div class="impact-card-desc">Quantified outcomes spanning three organizations</div>
+                    <div class="h-bar-chart" id="careerChart">
+                        <div class="h-bar-group">
+                            <div class="h-bar-header">
+                                <span class="h-bar-label">Delivery time improvement</span>
+                                <span class="h-bar-value">18%</span>
+                            </div>
+                            <div class="h-bar-track">
+                                <div class="h-bar-fill" data-width="18"></div>
+                            </div>
+                        </div>
+                        <div class="h-bar-group">
+                            <div class="h-bar-header">
+                                <span class="h-bar-label">Sprint velocity increase</span>
+                                <span class="h-bar-value">28%</span>
+                            </div>
+                            <div class="h-bar-track">
+                                <div class="h-bar-fill" data-width="28"></div>
+                            </div>
+                        </div>
+                        <div class="h-bar-group">
+                            <div class="h-bar-header">
+                                <span class="h-bar-label">Scope creep reduction</span>
+                                <span class="h-bar-value">45%</span>
+                            </div>
+                            <div class="h-bar-track">
+                                <div class="h-bar-fill" data-width="45"></div>
+                            </div>
+                        </div>
+                        <div class="h-bar-group">
+                            <div class="h-bar-header">
+                                <span class="h-bar-label">Team capability growth</span>
+                                <span class="h-bar-value">40%</span>
+                            </div>
+                            <div class="h-bar-track">
+                                <div class="h-bar-fill" data-width="40"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LESSONS ==================== -->
+    <section class="lessons-section" id="lessons">
+        <div class="section-container">
+            <span class="section-label reveal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                Lessons
+            </span>
+            <h2 class="section-title reveal">What experience taught me.</h2>
+            <p class="section-desc reveal">These are not textbook principles. They are hard-won lessons from real projects, real teams, and real deadlines.</p>
+
+            <div class="lessons-grid">
+                <div class="lesson-card reveal">
+                    <div class="lesson-number">01</div>
+                    <div class="lesson-title">Earn the right to innovate</div>
+                    <div class="lesson-text">Nobody cares about your great idea if you have not proven you can handle the basics. My manager did not trust my automation pitch. She trusted that I would not let the daily work suffer. Credibility comes before creativity.</div>
+                </div>
+
+                <div class="lesson-card reveal">
+                    <div class="lesson-number">02</div>
+                    <div class="lesson-title">Choose sustainable over impressive</div>
+                    <div class="lesson-text">I had ideas for Python scripts, SQL databases, custom applications. I scrapped them all. Because if my workflow breaks after I leave and nobody can troubleshoot it, I did not automate anything. I just created a different kind of problem. Low-code won because it was the right tool, not the cool one.</div>
+                </div>
+
+                <div class="lesson-card reveal">
+                    <div class="lesson-number">03</div>
+                    <div class="lesson-title">Most vendor problems are communication problems</div>
+                    <div class="lesson-text">I took vendor on-time delivery from 65% to 92%. Not with threats or escalations. With clarity. Clear criteria before work starts, checkpoints throughout, and treating vendors as partners instead of executors.</div>
+                </div>
+
+                <div class="lesson-card reveal">
+                    <div class="lesson-number">04</div>
+                    <div class="lesson-title">Start with process, not tools</div>
+                    <div class="lesson-text">Jira did not fix our delivery problems. Process did. When I inherited a team tracking work across spreadsheets, emails, and outdated files, leadership wanted "better tools." The real fix was one source of truth everyone trusted, weekly alignment, and visible accountability without micromanagement.</div>
+                </div>
+
+                <div class="lesson-card reveal">
+                    <div class="lesson-number">05</div>
+                    <div class="lesson-title">Documentation is a deliverable</div>
+                    <div class="lesson-text">A solution that breaks when you leave is not a solution. I built comprehensive troubleshooting guides for every automation I created. The goal was never to make myself indispensable. It was to make the work sustainable.</div>
+                </div>
+
+                <div class="lesson-card reveal">
+                    <div class="lesson-number">06</div>
+                    <div class="lesson-title">Give more than you take</div>
+                    <div class="lesson-text">Every team I have worked with invested in teaching me. The automation at State Street, the process improvements at Researchwire, the Scrum coaching at TCS. None of those were resume lines. They were ways of saying thank you.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TOOLKIT ==================== -->
+    <section class="toolkit-section" id="toolkit">
+        <div class="section-container">
+            <span class="section-label reveal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                Toolkit
+            </span>
+            <h2 class="section-title reveal">What I work with.</h2>
+            <p class="section-desc reveal">The tools I reach for depend on the problem. Here is the full picture.</p>
+
+            <div class="toolkit-categories">
+                <div class="toolkit-category reveal">
+                    <div class="toolkit-category-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+                    </div>
+                    <div class="toolkit-category-title">Project Management</div>
+                    <div class="toolkit-items">
+                        <span class="toolkit-item">Jira (Admin)</span>
+                        <span class="toolkit-item">Microsoft Project</span>
+                        <span class="toolkit-item">Smartsheet</span>
+                        <span class="toolkit-item">Confluence</span>
+                        <span class="toolkit-item">SharePoint</span>
+                    </div>
+                </div>
+
+                <div class="toolkit-category reveal">
+                    <div class="toolkit-category-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                    </div>
+                    <div class="toolkit-category-title">Data and Analytics</div>
+                    <div class="toolkit-items">
+                        <span class="toolkit-item">Power BI</span>
+                        <span class="toolkit-item">Tableau</span>
+                        <span class="toolkit-item">SQL</span>
+                        <span class="toolkit-item">Excel (VBA)</span>
+                        <span class="toolkit-item">Python</span>
+                        <span class="toolkit-item">R</span>
+                    </div>
+                </div>
+
+                <div class="toolkit-category reveal">
+                    <div class="toolkit-category-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M12 2v2"/><path d="M12 22v-2"/><path d="m17 20.66-1-1.73"/><path d="M11 10.27 7 3.34"/><path d="m20.66 17-1.73-1"/><path d="m3.34 7 1.73 1"/><path d="M14 12h8"/><path d="M2 12h2"/><path d="m20.66 7-1.73 1"/><path d="m3.34 17 1.73-1"/><path d="m17 3.34-1 1.73"/><path d="m11 13.73-4 6.93"/></svg>
+                    </div>
+                    <div class="toolkit-category-title">Automation</div>
+                    <div class="toolkit-items">
+                        <span class="toolkit-item">Power Apps</span>
+                        <span class="toolkit-item">Power Automate</span>
+                        <span class="toolkit-item">Power BI</span>
+                        <span class="toolkit-item">Microsoft Lists</span>
+                    </div>
+                </div>
+
+                <div class="toolkit-category reveal">
+                    <div class="toolkit-category-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    </div>
+                    <div class="toolkit-category-title">Methodologies</div>
+                    <div class="toolkit-items">
+                        <span class="toolkit-item">Agile</span>
+                        <span class="toolkit-item">Scrum</span>
+                        <span class="toolkit-item">Kanban</span>
+                        <span class="toolkit-item">Waterfall</span>
+                        <span class="toolkit-item">SAFe</span>
+                        <span class="toolkit-item">SDLC</span>
+                    </div>
+                </div>
+
+                <div class="toolkit-category reveal">
+                    <div class="toolkit-category-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <div class="toolkit-category-title">Leadership</div>
+                    <div class="toolkit-items">
+                        <span class="toolkit-item">Stakeholder Management</span>
+                        <span class="toolkit-item">Executive Communication</span>
+                        <span class="toolkit-item">Change Management</span>
+                        <span class="toolkit-item">Conflict Resolution</span>
+                    </div>
+                </div>
+
+                <div class="toolkit-category reveal">
+                    <div class="toolkit-category-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+                    </div>
+                    <div class="toolkit-category-title">Domain Expertise</div>
+                    <div class="toolkit-items">
+                        <span class="toolkit-item">Financial Services</span>
+                        <span class="toolkit-item">Cybersecurity GRC</span>
+                        <span class="toolkit-item">Banking Applications</span>
+                        <span class="toolkit-item">Regulatory Compliance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== AI & ENGINEERING ==================== -->
+    <section class="ai-section" id="ai">
+        <div class="section-container">
+            <span class="section-label reveal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/><circle cx="12" cy="15" r="2"/></svg>
+                AI & Engineering
+            </span>
+            <h2 class="section-title reveal">The engineer never left.</h2>
+
+            <p class="ai-hero-statement reveal">
+                I started by wiring circuits and programming robots. Then I built banking systems processing millions daily. Then I automated GRC operations saving $48K a year. <span class="ai-accent">Now I am bringing AI into the same workflow, not as a buzzword, but as the next logical tool in the same problem-solving chain.</span>
+            </p>
+
+            <!-- Evolution Timeline -->
+            <div class="evolution-track reveal">
+                <div class="evo-node">
+                    <div class="evo-dot"></div>
+                    <div class="evo-year">2015 - 2019</div>
+                    <div class="evo-title">Hardware & IoT</div>
+                    <div class="evo-desc">Arduino, Raspberry Pi, sensors, robotics. Built systems that talked to the physical world.</div>
+                </div>
+                <div class="evo-node">
+                    <div class="evo-dot"></div>
+                    <div class="evo-year">2019 - 2021</div>
+                    <div class="evo-title">Systems & Code</div>
+                    <div class="evo-desc">Java, SQL, banking APIs. Learned that when $100M flows daily, your code is not just code. It is infrastructure.</div>
+                </div>
+                <div class="evo-node">
+                    <div class="evo-dot"></div>
+                    <div class="evo-year">2021 - 2025</div>
+                    <div class="evo-title">Low-Code Automation</div>
+                    <div class="evo-desc">Power Platform, process mapping, Jira admin. Chose sustainable solutions over impressive ones.</div>
+                </div>
+                <div class="evo-node">
+                    <div class="evo-dot"></div>
+                    <div class="evo-year">2025 - Present</div>
+                    <div class="evo-title">AI Integration</div>
+                    <div class="evo-desc">AI Builder, prompt engineering, intelligent workflows. Extending automation into the cognitive layer.</div>
+                </div>
+            </div>
+
+            <!-- Engineering Roots -->
+            <div class="pipeline-title reveal">Engineering Roots</div>
+            <p class="pipeline-subtitle reveal">Before I managed projects, I built things. That instinct to understand how systems work under the hood never went away.</p>
+
+            <div class="eng-roots reveal">
+                <div class="eng-root-card">
+                    <div class="eng-root-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><line x1="3" x2="21" y1="9" y2="9"/><line x1="9" x2="9" y1="21" y2="9"/></svg>
+                    </div>
+                    <div class="eng-root-title">IoT & Embedded</div>
+                    <div class="eng-root-desc">Built home automation, parking systems, and hospital bots with Arduino and Raspberry Pi</div>
+                </div>
+                <div class="eng-root-card">
+                    <div class="eng-root-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <div class="eng-root-title">Full-Stack Dev</div>
+                    <div class="eng-root-desc">Java backend, SQL databases, Python, Android Studio. Built and shipped real products.</div>
+                </div>
+                <div class="eng-root-card">
+                    <div class="eng-root-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                    </div>
+                    <div class="eng-root-title">Data Systems</div>
+                    <div class="eng-root-desc">SQL, Power BI, Tableau, R. From raw data to executive dashboards informing $2M+ decisions.</div>
+                </div>
+                <div class="eng-root-card">
+                    <div class="eng-root-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M12 2v2"/><path d="M12 22v-2"/><path d="m17 20.66-1-1.73"/><path d="M11 10.27 7 3.34"/><path d="m20.66 17-1.73-1"/><path d="m3.34 7 1.73 1"/><path d="M14 12h8"/><path d="M2 12h2"/></svg>
+                    </div>
+                    <div class="eng-root-title">Process Automation</div>
+                    <div class="eng-root-desc">Power Apps, Power Automate, VBA. If a human does it twice, I find a way to automate it.</div>
+                </div>
+            </div>
+
+            <!-- AI-Integrated Workflow Pipeline -->
+            <div class="pipeline-container reveal">
+                <div class="pipeline-title">How AI Fits Into My Workflow</div>
+                <p class="pipeline-subtitle">This is not a theoretical framework. It is the actual pipeline I use. AI augments specific stages where pattern recognition and language processing add measurable value.</p>
+
+                <div class="pipeline">
+                    <div class="pipeline-step">
+                        <div class="pipe-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        </div>
+                        <div class="pipe-label">Step 01</div>
+                        <div class="pipe-title">Discover</div>
+                        <div class="pipe-desc">Map processes with flowcharts. Find the inefficiency before picking any tool.</div>
+                        <div class="pipe-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+                    </div>
+
+                    <div class="pipeline-step">
+                        <div class="pipe-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                        <div class="pipe-label">Step 02</div>
+                        <div class="pipe-title">Automate</div>
+                        <div class="pipe-desc">Build the workflow. Power Apps, Power Automate, low-code first. Sustainable over flashy.</div>
+                        <div class="pipe-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+                    </div>
+
+                    <div class="pipeline-step ai-enhanced">
+                        <div class="pipe-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/><circle cx="12" cy="15" r="2"/></svg>
+                        </div>
+                        <div class="pipe-label">Step 03</div>
+                        <div class="pipe-title">AI Layer</div>
+                        <div class="pipe-desc">AI Builder for document processing, prompt engineering for reporting, intelligent categorization.</div>
+                        <span class="pipe-ai-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg> AI-ENHANCED</span>
+                        <div class="pipe-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+                    </div>
+
+                    <div class="pipeline-step ai-enhanced">
+                        <div class="pipe-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <div class="pipe-label">Step 04</div>
+                        <div class="pipe-title">Communicate</div>
+                        <div class="pipe-desc">AI-assisted status reports, natural language summaries of project health for C-suite reviews.</div>
+                        <span class="pipe-ai-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg> AI-ENHANCED</span>
+                        <div class="pipe-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+                    </div>
+
+                    <div class="pipeline-step">
+                        <div class="pipe-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        </div>
+                        <div class="pipe-label">Step 05</div>
+                        <div class="pipe-title">Document</div>
+                        <div class="pipe-desc">Troubleshooting guides, runbooks, governance hubs. The solution survives without me.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Toolkit -->
+            <div class="pipeline-title reveal">AI Toolkit</div>
+            <p class="pipeline-subtitle reveal">The tools I use and the certifications that back them up. Not just course completions. Real, hands-on proficiency.</p>
+
+            <div class="ai-toolkit-grid reveal">
+                <div class="ai-tool-card">
+                    <div class="ai-tool-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M12 2v2"/><path d="M12 22v-2"/><path d="m17 20.66-1-1.73"/><path d="M11 10.27 7 3.34"/><path d="m20.66 17-1.73-1"/><path d="m3.34 7 1.73 1"/><path d="M14 12h8"/><path d="M2 12h2"/></svg>
+                    </div>
+                    <div class="ai-tool-name">Power Automate AI Builder</div>
+                    <div class="ai-tool-type">Intelligent Automation</div>
+                    <div class="ai-tool-desc">Extending my existing Power Platform expertise into AI territory. Document processing, form extraction, intelligent routing of project requests.</div>
+                </div>
+
+                <div class="ai-tool-card">
+                    <div class="ai-tool-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <div class="ai-tool-name">Prompt Engineering</div>
+                    <div class="ai-tool-type">AI-Augmented PM Workflows</div>
+                    <div class="ai-tool-desc">Systematized prompt library for PM operations: project charters, RAID logs, sprint reviews, executive summaries, risk identification, and stakeholder communications.</div>
+                </div>
+
+                <div class="ai-tool-card">
+                    <div class="ai-tool-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/><circle cx="12" cy="15" r="2"/></svg>
+                    </div>
+                    <div class="ai-tool-name">AI Evaluation Framework</div>
+                    <div class="ai-tool-type">Strategic Decision-Making</div>
+                    <div class="ai-tool-desc">Decision matrix for evaluating which AI tools to adopt for different PM workflows. Not every problem needs AI. Knowing when not to use it is the real skill.</div>
+                </div>
+
+                <div class="ai-tool-card">
+                    <div class="ai-tool-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                    </div>
+                    <div class="ai-tool-name">Atlassian Intelligence</div>
+                    <div class="ai-tool-type">Smart Project Tracking</div>
+                    <div class="ai-tool-desc">AI-assisted backlog prioritization, automated subtask generation, smart sprint summaries. Extending my Jira Admin expertise with the AI layer.</div>
+                </div>
+
+                <div class="ai-tool-card">
+                    <div class="ai-tool-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <div class="ai-tool-name">Google AI Essentials</div>
+                    <div class="ai-tool-type">Certification</div>
+                    <div class="ai-tool-desc">Practical AI usage for professionals. Generative AI tools, responsible AI principles, and selecting the right AI tool for the right workflow.</div>
+                    <div class="ai-cert-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>
+                        CERTIFIED
+                    </div>
+                </div>
+
+                <div class="ai-tool-card">
+                    <div class="ai-tool-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+                    </div>
+                    <div class="ai-tool-name">Microsoft AI-900</div>
+                    <div class="ai-tool-type">Certification</div>
+                    <div class="ai-tool-desc">Azure AI Fundamentals. Machine learning concepts, computer vision, NLP, and conversational AI. The foundation for everything Microsoft is building.</div>
+                    <div class="ai-cert-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>
+                        CERTIFIED
+                    </div>
+                </div>
+            </div>
+
+            <!-- Philosophy -->
+            <div class="ai-philosophy reveal">
+                <div class="ai-phil-card dark">
+                    <p class="ai-phil-quote">AI should augment judgment, not replace it.</p>
+                    <p class="ai-phil-body">I had ideas for Python scripts, SQL databases, and custom applications at State Street. I scrapped them all. Because if my workflow breaks after I leave and nobody can troubleshoot it, I did not automate anything. I just created a different kind of problem. The same principle applies to AI. The question is never "can AI do this?" The question is "should AI do this, and will it still work when I am not in the room?"</p>
+                </div>
+
+                <div class="ai-phil-card glass">
+                    <p class="ai-phil-quote">I do not just use AI. I evaluate, implement, and govern it.</p>
+                    <p class="ai-phil-body">At State Street I built automation that saved $48K annually. Now I am extending that same mindset into AI: specifically how to evaluate which tools to adopt, how to implement them within existing project workflows, and how to govern their use so the organization does not end up with another unsustainable dependency. The engineer in me asks "how does this work?" The project manager asks "how does this scale?"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EDUCATION ==================== -->
+    <section class="education-section" id="education">
+        <div class="section-container">
+            <span class="section-label reveal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 6 3s3 0 6-3v-5"/></svg>
+                Education
+            </span>
+            <h2 class="section-title reveal">The foundation.</h2>
+            <p class="section-desc reveal">From engineering in Mumbai to project management in Boston.</p>
+
+            <div class="edu-cards">
+
+                <div class="edu-card primary reveal">
+                    <div>
+                        <div class="edu-highlight">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            Merit-Based Scholarship
+                        </div>
+                        <div class="edu-degree">MS in Project Management</div>
+                        <div class="edu-school">Northeastern University, Boston, MA</div>
+                        <div class="edu-date">September 2023 - December 2025</div>
+                        <div class="edu-coursework">
+                            <span class="edu-course">Agile Principles</span>
+                            <span class="edu-course">Portfolio Management</span>
+                            <span class="edu-course">Data Analytics</span>
+                            <span class="edu-course">Risk Management</span>
+                            <span class="edu-course">Business Analysis</span>
+                            <span class="edu-course">Quality Management</span>
+                            <span class="edu-course">Change Management</span>
+                        </div>
+                    </div>
+                    <div class="edu-gpa-visual">
+                        <div class="gpa-ring">
+                            <svg viewBox="0 0 200 200">
+                                <circle class="track" cx="100" cy="100" r="90"/>
+                                <circle class="fill" id="gpaFill" cx="100" cy="100" r="90" data-percent="97.5"/>
+                            </svg>
+                            <div class="gpa-center">
+                                <div class="gpa-number">3.9</div>
+                                <div class="gpa-label">out of 4.0</div>
+                            </div>
+                        </div>
+                        <div class="gpa-scholarship">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 6 3s3 0 6-3v-5"/></svg>
+                            Certified ScrumMaster (CSM)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edu-card reveal">
+                    <div class="edu-degree">BS in Electronics and Telecommunication</div>
+                    <div class="edu-school">University of Mumbai, India</div>
+                    <div class="edu-date">September 2016 - June 2019</div>
+                    <p style="font-size: 0.9rem; color: var(--gray-500); margin-top: 12px; line-height: 1.6;">
+                        R&D Head at RAIT Chapter. Led a 12-member student research team across 3 engineering departments.
+                    </p>
+                </div>
+
+                <div class="edu-card reveal">
+                    <div class="edu-degree">Diploma in Industrial Electronics</div>
+                    <div class="edu-school">MSBTE, Mumbai, India</div>
+                    <div class="edu-date">August 2014 - June 2016</div>
+                    <p style="font-size: 0.9rem; color: var(--gray-500); margin-top: 12px; line-height: 1.6;">
+                        Where curiosity met circuitry. Built robots, automated homes, and learned that the best projects solve real problems.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <span class="section-label reveal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Connect
+            </span>
+            <h2 class="section-title reveal">Let's build something together.</h2>
+            <p class="section-desc reveal">I am actively looking for Project Manager and Program Manager roles where I can bring operational discipline to high-impact initiatives. Based in Austin, TX. Open to relocation.</p>
+
+            <div class="contact-cards reveal">
+                <a href="https://www.linkedin.com/in/pranaysondkar" target="_blank" rel="noopener" class="contact-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    <div class="contact-card-text">
+                        <div class="contact-card-label">LinkedIn</div>
+                        <div class="contact-card-value">linkedin.com/in/pranaysondkar</div>
+                    </div>
+                </a>
+
+                <a href="mailto:pranayprakashsondkar@gmail.com" class="contact-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <div class="contact-card-text">
+                        <div class="contact-card-label">Email</div>
+                        <div class="contact-card-value">pranayprakashsondkar@gmail.com</div>
+                    </div>
+                </a>
+
+                <a href="tel:+18573328306" class="contact-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <div class="contact-card-text">
+                        <div class="contact-card-label">Phone</div>
+                        <div class="contact-card-value">857-332-8306</div>
+                    </div>
+                </a>
+
+                <a href="#" class="contact-card" style="pointer-events: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <div class="contact-card-text">
+                        <div class="contact-card-label">Location</div>
+                        <div class="contact-card-value">Austin, TX</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <p class="footer-text">
+            Designed and built by Pranay Sondkar. &copy; 2026.
+            <br>
+            <a href="https://www.linkedin.com/in/pranaysondkar" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        // ---- Navigation scroll effect ----
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // ---- Mobile toggle ----
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+        // ---- Active nav link ----
+        const sections = document.querySelectorAll('section[id]');
+        const navLinkEls = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 200;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinkEls.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // ---- Scroll reveal ----
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ---- Animate bar charts ----
+        const barObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bars = entry.target.querySelectorAll('.bar');
+                    bars.forEach(bar => {
+                        const height = bar.getAttribute('data-height');
+                        setTimeout(() => {
+                            bar.style.height = height + 'px';
+                        }, 200);
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const automationChart = document.getElementById('automationChart');
+        if (automationChart) barObserver.observe(automationChart);
+
+        // ---- Animate horizontal bars ----
+        const hBarObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const fills = entry.target.querySelectorAll('.h-bar-fill');
+                    fills.forEach((fill, i) => {
+                        const width = fill.getAttribute('data-width');
+                        setTimeout(() => {
+                            fill.style.width = width + '%';
+                        }, 200 + i * 150);
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.h-bar-chart').forEach(chart => hBarObserver.observe(chart));
+
+        // ---- Animate donut chart ----
+        const donutObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const fill = document.getElementById('donutFill');
+                    const valueEl = document.getElementById('donutValue');
+                    const percent = parseFloat(fill.getAttribute('data-percent'));
+                    const circumference = 2 * Math.PI * 60;
+                    const dashArray = (percent / 100) * circumference;
+
+                    setTimeout(() => {
+                        fill.style.strokeDasharray = dashArray + ' ' + circumference;
+                    }, 300);
+
+                    // Animate number
+                    let current = 0;
+                    const increment = percent / 40;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= percent) {
+                            current = percent;
+                            clearInterval(timer);
+                        }
+                        valueEl.textContent = Math.round(current) + '%';
+                    }, 30);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const donutFill = document.getElementById('donutFill');
+        if (donutFill) donutObserver.observe(donutFill.closest('.impact-card'));
+
+        // ---- Animate GPA ring ----
+        const gpaObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const fill = document.getElementById('gpaFill');
+                    const percent = parseFloat(fill.getAttribute('data-percent'));
+                    const circumference = 2 * Math.PI * 90;
+                    const dashArray = (percent / 100) * circumference;
+
+                    setTimeout(() => {
+                        fill.style.strokeDasharray = dashArray + ' ' + circumference;
+                    }, 300);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const gpaFill = document.getElementById('gpaFill');
+        if (gpaFill) gpaObserver.observe(gpaFill.closest('.edu-card'));
+
+        // ---- Smooth scroll for nav links ----
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    navLinks.classList.remove('open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
