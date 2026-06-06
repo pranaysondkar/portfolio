@@ -3,16 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pranay Sondkar - Project Manager</title>
-    <meta name="description" content="Portfolio of Pranay Sondkar - Project Manager specializing in process automation, GRC operations, and cross-functional leadership.">
+    <title>Pranay Sondkar — Project Manager | Process Automation & GRC</title>
+    <meta name="description" content="Portfolio of Pranay Sondkar, MSPM — Project Manager specializing in process automation, GRC operations, and cross-functional leadership. 4.5 years experience. $150K+ in automation savings.">
 
-    <!-- Fonts: Apple system stack + fallback to clean sans-serifs -->
+    <!-- Open Graph -->
+    <meta property="og:title" content="Pranay Sondkar — Project Manager">
+    <meta property="og:description" content="Project Manager specializing in process automation, GRC operations, and cross-functional leadership. 4.5 years experience across financial services & technology.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pranaysondkar.github.io/portfolio/">
+    <meta property="og:image" content="https://pranaysondkar.github.io/portfolio/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pranay Sondkar — Project Manager">
+    <meta name="twitter:description" content="Project Manager specializing in process automation, GRC operations, and cross-functional leadership.">
+
+    <link rel="canonical" href="https://pranaysondkar.github.io/portfolio/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23000'/><text x='50' y='68' font-family='system-ui' font-size='48' font-weight='700' fill='%23fff' text-anchor='middle'>PS</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Pranay Sondkar",
+        "jobTitle": "Project Manager",
+        "url": "https://pranaysondkar.github.io/portfolio/",
+        "sameAs": [
+            "https://www.linkedin.com/in/pranaysondkar",
+            "https://www.instagram.com/pranayslens"
+        ],
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Northeastern University"
+        },
+        "knowsAbout": ["Project Management", "Process Automation", "GRC", "Agile", "Scrum"]
+    }
+    </script>
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
         :root {
-            --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', 'Segoe UI', sans-serif;
-            --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', 'Segoe UI', sans-serif;
+            --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', 'Segoe UI', sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', 'Segoe UI', sans-serif;
             --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
 
             --white: #ffffff;
@@ -245,27 +286,68 @@
             75% { transform: translate(15px, 15px) scale(1.02); }
         }
 
-        .hero-content {
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            align-items: stretch;
+            gap: 0;
+            max-width: 1300px;
+            width: 100%;
+            margin: 0 auto;
             position: relative;
             z-index: 1;
-            max-width: 900px;
-            text-align: center;
+            
+            /* Card Styling */
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: left;
+            padding: 60px 40px 60px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            opacity: 0;
+            transform: translateX(30px);
+            animation: fadeUp 1s var(--transition) 0.3s forwards;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+            object-fit: cover;
+            border-radius: 0;
+            -webkit-mask-image: linear-gradient(to left, black 0%, black 50%, transparent 100%);
+            mask-image: linear-gradient(to left, black 0%, black 50%, transparent 100%);
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 8px 20px;
-            background: var(--glass-bg);
-            backdrop-filter: var(--glass-blur);
-            -webkit-backdrop-filter: var(--glass-blur);
-            border: 1px solid var(--glass-border);
-            border-radius: 100px;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             font-weight: 500;
             color: var(--gray-600);
-            margin-bottom: 32px;
+            margin-bottom: 24px;
             opacity: 0;
             transform: translateY(20px);
             animation: fadeUp 0.8s var(--transition) 0.2s forwards;
@@ -321,7 +403,7 @@
             color: var(--gray-500);
             line-height: 1.7;
             max-width: 680px;
-            margin: 0 auto 48px;
+            margin: 0 0 48px;
             opacity: 0;
             transform: translateY(30px);
             animation: fadeUp 0.8s var(--transition) 0.6s forwards;
@@ -330,7 +412,7 @@
         .hero-actions {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             gap: 16px;
             opacity: 0;
             transform: translateY(30px);
@@ -360,8 +442,8 @@
         }
 
         .btn-primary svg {
-            width: 18px;
-            height: 18px;
+            width: 22px;
+            height: 22px;
         }
 
         .btn-secondary {
@@ -389,8 +471,8 @@
         }
 
         .btn-secondary svg {
-            width: 18px;
-            height: 18px;
+            width: 22px;
+            height: 22px;
         }
 
         .hero-scroll {
@@ -989,20 +1071,20 @@
 
         /* ============ LESSONS ============ */
         .lessons-section {
-            background: var(--black);
-            color: var(--white);
+            background: #0a0a0a;
+            color: #ffffff;
         }
 
         .lessons-section .section-label {
-            color: var(--gray-400);
+            color: #9ca3af;
         }
 
         .lessons-section .section-title {
-            color: var(--white);
+            color: #ffffff;
         }
 
         .lessons-section .section-desc {
-            color: var(--gray-400);
+            color: #9ca3af;
         }
 
         .lessons-grid {
@@ -1031,7 +1113,7 @@
             font-family: var(--font-display);
             font-size: 3rem;
             font-weight: 700;
-            color: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.15);
             line-height: 1;
             margin-bottom: 20px;
         }
@@ -1040,13 +1122,13 @@
             font-family: var(--font-display);
             font-size: 1.25rem;
             font-weight: 600;
-            color: var(--white);
+            color: #ffffff;
             margin-bottom: 12px;
         }
 
         .lesson-text {
             font-size: 0.95rem;
-            color: var(--gray-400);
+            color: #9ca3af;
             line-height: 1.7;
         }
 
@@ -1817,6 +1899,37 @@
 
         /* ============ RESPONSIVE ============ */
         @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 0;
+                text-align: center;
+                padding: 0;
+            }
+            .hero-content {
+                text-align: center;
+                order: 1;
+                padding: 40px 30px 20px 30px;
+            }
+            .hero-subtitle {
+                margin: 0 auto 48px;
+            }
+            .hero-actions {
+                justify-content: center;
+            }
+            .hero-image-wrapper {
+                justify-content: center;
+                order: 2;
+                width: 100%;
+                transform: translateY(30px) !important;
+            }
+            .hero-image {
+                width: 100%;
+                height: 400px;
+                min-height: auto;
+                -webkit-mask-image: linear-gradient(to top, black 0%, black 50%, transparent 100%);
+                mask-image: linear-gradient(to top, black 0%, black 50%, transparent 100%);
+            }
+
             .about-grid {
                 grid-template-columns: 1fr;
                 gap: 48px;
@@ -2124,9 +2237,574 @@
                 padding: 24px 20px;
             }
         }
+
+        /* ============ SKIP TO CONTENT ============ */
+        .skip-to-content {
+            position: absolute;
+            top: -100%;
+            left: 16px;
+            z-index: 9999;
+            padding: 12px 24px;
+            background: var(--black);
+            color: var(--white);
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: var(--radius-xs);
+            transition: top 0.3s;
+        }
+
+        .skip-to-content:focus {
+            top: 16px;
+        }
+
+        /* ============ FOCUS VISIBLE ============ */
+        *:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+
+        /* ============ DARK MODE TOGGLE ============ */
+        .theme-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s var(--transition);
+            margin-left: 4px;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(0,0,0,0.05);
+            transform: scale(1.08);
+        }
+
+        .theme-toggle svg {
+            width: 18px;
+            height: 18px;
+            color: var(--gray-700);
+            transition: all 0.3s var(--transition);
+        }
+
+        .theme-toggle .icon-moon { display: block; }
+        .theme-toggle .icon-sun { display: none; }
+
+        /* ============ WORK AUTH BADGE ============ */
+        .work-auth-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(34, 197, 94, 0.08);
+            border: 1px solid rgba(34, 197, 94, 0.25);
+            border-radius: 100px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: #15803d;
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s var(--transition) 1s forwards;
+        }
+
+        .work-auth-badge svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        /* ============ PROJECTS SECTION ============ */
+        .projects-section {
+            background: var(--gray-50);
+        }
+
+        .project-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .project-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 48px;
+            transition: all 0.5s var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--black));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s var(--transition);
+        }
+
+        .project-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .project-card:hover {
+            border-color: var(--gray-300);
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.06);
+            transform: translateY(-4px);
+        }
+
+        .project-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .project-type {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 5px 14px;
+            background: var(--accent-light);
+            border: 1px solid var(--accent-border);
+            border-radius: 100px;
+        }
+
+        .project-type svg {
+            width: 12px;
+            height: 12px;
+        }
+
+        .project-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--black);
+            margin-bottom: 4px;
+        }
+
+        .project-org {
+            font-size: 1rem;
+            color: var(--gray-500);
+            margin-bottom: 8px;
+        }
+
+        .project-date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--gray-400);
+        }
+
+        .project-overview {
+            font-size: 1.05rem;
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 32px;
+            max-width: 800px;
+        }
+
+        .project-overview .highlight {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .project-details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .project-detail-card {
+            padding: 24px;
+            background: var(--gray-50);
+            border-radius: var(--radius-sm);
+        }
+
+        .project-detail-label {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+
+        .project-detail-value {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--black);
+        }
+
+        .pm-artifacts-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .pm-artifact {
+            padding: 20px 16px;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-xs);
+            text-align: center;
+            transition: all 0.3s var(--transition);
+        }
+
+        .pm-artifact:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .pm-artifact-icon {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--white);
+            border-radius: 8px;
+            margin: 0 auto 10px;
+        }
+
+        .pm-artifact-icon svg {
+            width: 18px;
+            height: 18px;
+            color: var(--accent);
+        }
+
+        .pm-artifact-name {
+            font-family: var(--font-display);
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--black);
+        }
+
+        /* ============ DARK MODE ============ */
+        [data-theme="dark"] {
+            --white: #1a1a1a;
+            --black: #f5f5f7;
+            --gray-50: #111111;
+            --gray-100: #1c1c1e;
+            --gray-200: #2c2c2e;
+            --gray-300: #3a3a3c;
+            --gray-400: #636366;
+            --gray-500: #8e8e93;
+            --gray-600: #aeaeb2;
+            --gray-700: #c7c7cc;
+            --gray-800: #e5e5ea;
+            --gray-900: #f5f5f7;
+            --accent: #5b9cf6;
+            --accent-light: rgba(91, 156, 246, 0.1);
+            --accent-border: rgba(91, 156, 246, 0.25);
+            --glass-bg: rgba(28, 28, 30, 0.8);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        [data-theme="dark"] body {
+            background: #0a0a0a;
+        }
+
+        [data-theme="dark"] ::selection {
+            background: var(--accent);
+            color: #000;
+        }
+
+        [data-theme="dark"] .nav-inner {
+            background: rgba(28, 28, 30, 0.85);
+            border-color: rgba(255, 255, 255, 0.06);
+        }
+
+        [data-theme="dark"] .theme-toggle {
+            border-color: rgba(255,255,255,0.12);
+        }
+
+        [data-theme="dark"] .theme-toggle:hover {
+            background: rgba(255,255,255,0.06);
+        }
+
+        [data-theme="dark"] .theme-toggle svg {
+            color: var(--gray-400);
+        }
+
+        [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+        [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+
+        [data-theme="dark"] .hero-orb-1 { background: var(--accent); opacity: 0.08; }
+        [data-theme="dark"] .hero-orb-2 { background: #818cf8; opacity: 0.06; }
+        [data-theme="dark"] .hero-orb-3 { background: #a78bfa; opacity: 0.05; }
+
+
+
+        [data-theme="dark"] .status-dot {
+            background: #22c55e;
+        }
+
+        [data-theme="dark"] .btn-primary {
+            background: #f5f5f7;
+            color: #0a0a0a;
+        }
+
+        [data-theme="dark"] .btn-primary:hover {
+            background: #e5e5ea;
+        }
+
+        [data-theme="dark"] .btn-secondary {
+            background: rgba(255,255,255,0.06);
+            border-color: rgba(255,255,255,0.1);
+            color: #f5f5f7;
+        }
+
+        [data-theme="dark"] .about-section,
+        [data-theme="dark"] .impact-section,
+        [data-theme="dark"] .ai-section,
+        [data-theme="dark"] .education-section {
+            background: #111111;
+        }
+
+        [data-theme="dark"] .journey-card,
+        [data-theme="dark"] .toolkit-category,
+        [data-theme="dark"] .edu-card,
+        [data-theme="dark"] .contact-card,
+        [data-theme="dark"] .impact-card,
+        [data-theme="dark"] .project-card {
+            background: #1a1a1a;
+            border-color: #2c2c2e;
+        }
+
+        [data-theme="dark"] .value-card {
+            background: rgba(255,255,255,0.03);
+            border-color: rgba(255,255,255,0.06);
+        }
+
+        [data-theme="dark"] .value-icon {
+            background: #f5f5f7;
+            color: #0a0a0a;
+        }
+
+        [data-theme="dark"] .metric-card,
+        [data-theme="dark"] .project-detail-card,
+        [data-theme="dark"] .pm-artifact {
+            background: #111111;
+        }
+
+        [data-theme="dark"] .journey-tag,
+        [data-theme="dark"] .toolkit-item,
+        [data-theme="dark"] .edu-course {
+            background: #2c2c2e;
+            color: var(--gray-500);
+        }
+
+        [data-theme="dark"] .journey-date {
+            background: #2c2c2e;
+        }
+
+        [data-theme="dark"] .lessons-section {
+            background: #050505;
+        }
+
+        [data-theme="dark"] .lesson-card {
+            background: rgba(255,255,255,0.03);
+            border-color: rgba(255,255,255,0.05);
+        }
+
+        [data-theme="dark"] .footer {
+            background: #050505;
+        }
+
+        [data-theme="dark"] .about-stat {
+            border-color: #2c2c2e;
+        }
+
+        [data-theme="dark"] .scroll-line {
+            background: linear-gradient(to bottom, var(--accent), transparent);
+        }
+
+        [data-theme="dark"] .nav-link.active {
+            background: #f5f5f7;
+            color: #0a0a0a;
+        }
+
+        [data-theme="dark"] .nav-cta {
+            background: #f5f5f7;
+            color: #0a0a0a;
+        }
+
+        [data-theme="dark"] .bar.before {
+            background: #3a3a3c;
+        }
+
+        [data-theme="dark"] .donut-track,
+        [data-theme="dark"] .gpa-ring .track {
+            stroke: #2c2c2e;
+        }
+
+        [data-theme="dark"] .h-bar-track {
+            background: #2c2c2e;
+        }
+
+        [data-theme="dark"] .toolkit-category-icon {
+            background: #2c2c2e;
+        }
+
+        [data-theme="dark"] .toolkit-category-icon svg {
+            color: var(--gray-500);
+        }
+
+        [data-theme="dark"] .ai-tool-card {
+            background: #1a1a1a;
+            border-color: #2c2c2e;
+        }
+
+        [data-theme="dark"] .ai-tool-card-icon {
+            background: #111111;
+            border-color: #2c2c2e;
+        }
+
+        [data-theme="dark"] .ai-phil-card.dark {
+            background: #f5f5f7;
+            color: #0a0a0a;
+        }
+
+        [data-theme="dark"] .ai-phil-card.dark .ai-phil-quote {
+            color: #0a0a0a;
+        }
+
+        [data-theme="dark"] .ai-phil-card.dark .ai-phil-body {
+            color: #48484a;
+        }
+
+        [data-theme="dark"] .ai-phil-card.glass {
+            background: rgba(255,255,255,0.03);
+            border-color: rgba(255,255,255,0.06);
+        }
+
+        [data-theme="dark"] .eng-root-card {
+            background: #1a1a1a;
+            border-color: #2c2c2e;
+        }
+
+        [data-theme="dark"] .eng-root-icon {
+            background: #111111;
+        }
+
+        [data-theme="dark"] .pipeline-step {
+            background: #1a1a1a;
+            border-color: #2c2c2e;
+        }
+
+        [data-theme="dark"] .pipeline-step.ai-enhanced {
+            background: #f5f5f7;
+            border-color: #f5f5f7;
+        }
+
+        [data-theme="dark"] .pipeline-step.ai-enhanced .pipe-title,
+        [data-theme="dark"] .pipeline-step.ai-enhanced .pipe-label,
+        [data-theme="dark"] .pipeline-step.ai-enhanced .pipe-desc {
+            color: #0a0a0a;
+        }
+
+        [data-theme="dark"] .pipe-icon {
+            background: #2c2c2e;
+        }
+
+        [data-theme="dark"] .pipe-icon svg {
+            color: var(--gray-500);
+        }
+
+        [data-theme="dark"] .edu-highlight {
+            background: #f5f5f7;
+            color: #0a0a0a;
+        }
+
+        [data-theme="dark"] .work-auth-badge {
+            background: rgba(34, 197, 94, 0.08);
+            border-color: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+        }
+
+        [data-theme="dark"] .project-type {
+            background: rgba(91, 156, 246, 0.1);
+            border-color: rgba(91, 156, 246, 0.2);
+        }
+
+        [data-theme="dark"] .mobile-toggle svg {
+            color: var(--gray-500);
+        }
+
+        /* ============ RESPONSIVE: Projects ============ */
+        @media (max-width: 1024px) {
+            .project-details-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .pm-artifacts-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                padding: 28px 20px;
+            }
+            .project-details-grid {
+                grid-template-columns: 1fr;
+            }
+            .pm-artifacts-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pm-artifacts-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+            .pm-artifact {
+                padding: 14px 10px;
+            }
+        }
+
+        /* ============ REDUCED MOTION ============ */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            html { scroll-behavior: auto; }
+            .hero-orb { animation: none; }
+            .status-dot { animation: none; }
+            .scroll-line { animation: none; }
+            .reveal { opacity: 1; transform: none; }
+        }
     </style>
 </head>
 <body>
+
+    <!-- Skip to content -->
+    <a href="#about" class="skip-to-content">Skip to content</a>
 
     <!-- ==================== NAVIGATION ==================== -->
     <nav class="nav" id="nav">
@@ -2137,6 +2815,7 @@
                 <a href="#about" class="nav-link">About</a>
                 <a href="#journey" class="nav-link">Journey</a>
                 <a href="#impact" class="nav-link">Impact</a>
+                <a href="#projects" class="nav-link">Projects</a>
                 <a href="#lessons" class="nav-link">Lessons</a>
                 <a href="#toolkit" class="nav-link">Toolkit</a>
                 <a href="#ai" class="nav-link">AI</a>
@@ -2147,6 +2826,11 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                 LinkedIn
             </a>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </button>
 
             <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
@@ -2165,8 +2849,9 @@
 
 
 
-        <div class="hero-content">
-            <div class="hero-badge">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
                 <div class="status-dot"></div>
                 Open to opportunities
             </div>
@@ -2175,10 +2860,10 @@
                 Pranay Sondkar
             </h1>
 
-            <p class="hero-role">Project Manager & Process Engineer | Financial Services & GRC</p>
+            <p class="hero-role">Project Manager, MSPM | Process Automation & GRC | Financial Services</p>
 
             <p class="hero-subtitle">
-                I help organizations deliver complex projects without the usual chaos. Less firefighting, more building. If that sounds boring, you have never watched a project go sideways.
+                I build the infrastructure so teams can do their actual jobs without fighting process. 4.5 years owning cross-functional delivery, documentation frameworks, and process automation. $150K+ in automation savings shipped. If that sounds boring, you have never watched a project go sideways.
             </p>
 
             <div class="hero-actions">
@@ -2186,14 +2871,24 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                     Connect on LinkedIn
                 </a>
+                <a href="Pranay_Sondkar_Resume.pdf" download class="btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                    Download Resume
+                </a>
                 <a href="#journey" class="btn-secondary">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                     View my journey
                 </a>
-                <a href="#contact" class="btn-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    Get in touch
-                </a>
+            </div>
+
+                <div class="work-auth-badge" style="margin-top: 32px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                    F-1 OPT with STEM Extension · Valid through Feb 2029
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper">
+                <img src="selfie.jpeg" alt="Pranay Sondkar" class="hero-image" />
             </div>
         </div>
 
@@ -2222,21 +2917,21 @@
                     </p>
 
                     <p class="about-text">
-                        That thread connects everything I do: find the messy, manual, "we've always done it this way" process and build something better. Not with the flashiest technology, but with the right one. The kind of solution that works when you leave the room.
+                        That thread connects everything I do: find the messy, manual, "we've always done it this way" process and build something better. Not with the flashiest technology, but with the right one. The kind of solution that works when you leave the room. Today, I bring that same instinct to AI-augmented workflows, from agentic outreach pipelines to Copilot-powered GRC triage.
                     </p>
 
                     <p class="about-text">
-                        I am a project manager with 4+ years of experience across financial services, technology, and GRC operations. Certified ScrumMaster. MS in Project Management from Northeastern, 3.9 GPA. Currently based in Austin, TX, where I traded Boston winters for breakfast tacos.
+                        I am a project manager with 4.5 years of experience across financial services, technology, and GRC operations. Certified ScrumMaster. MS in Project Management from Northeastern, 3.95 GPA. Shipped automations saving $150K annually. Currently based in Austin, TX, where I traded Boston winters for breakfast tacos.
                     </p>
 
                     <div class="about-stats">
                         <div class="about-stat">
-                            <div class="about-stat-number">4+</div>
+                            <div class="about-stat-number">4.5+</div>
                             <div class="about-stat-label">Years experience</div>
                         </div>
                         <div class="about-stat">
-                            <div class="about-stat-number">70+</div>
-                            <div class="about-stat-label">Team members led</div>
+                            <div class="about-stat-number">$150K</div>
+                            <div class="about-stat-label">Annual savings shipped</div>
                         </div>
                         <div class="about-stat">
                             <div class="about-stat-number">$5M+</div>
@@ -2292,7 +2987,7 @@
                     <div class="journey-header">
                         <div>
                             <div class="journey-company">TechEquity AI</div>
-                            <div class="journey-role">Volunteer Project Manager</div>
+                            <div class="journey-role">Project Manager</div>
                         </div>
                         <div class="journey-meta">
                             <span class="journey-date">
@@ -2307,40 +3002,38 @@
                     </div>
 
                     <p class="journey-story">
-                        When I joined TechEquity AI, there was no project management function. No SOPs, no trackers, no standardized workflows. Just a passionate team running AI community events across Silicon Valley with a lot of energy and not enough structure. So I did what I always do: <span class="highlight">I built the system from scratch</span>.
+                        When I joined TechEquity AI, there was no project management function. No SOPs, no trackers, no standardized workflows. Just a passionate nonprofit democratizing AI through community events. So I did what I always do: <span class="highlight">I built the PMO function from scratch</span> — establishing an operational roadmap, defining cross-functional roles, processes, and deliverables for a 10-person team.
                     </p>
                     <p class="journey-story">
-                        I designed the end-to-end lead research and outreach process for event business development, from company sourcing through Crunchbase to contact discovery through Apollo.io to automated outreach sequencing. Built the team's first <span class="highlight">List Building SOP from scratch</span>, now on version 1.3, with five quality gates, a self-selection assignment model for interns, and a naming convention framework across six artifact types. Replaced informal Slack messages and personal notes with a Slack Lists tracker that became the <span class="highlight">single source of truth</span> for all project activity.
-                    </p>
-                    <p class="journey-story">
-                        This is a volunteer role, and I chose it deliberately. Not everything that builds your skills shows up on a paycheck. I wanted to prove I could build a PMO function from nothing, manage a growing team, and ship real process improvements, not because someone assigned it to me, but because the work needed doing.
+                        I standardized the List Building SOP with 5 quality gates and a status tracker, replacing scattered Slack threads. Then I introduced <span class="highlight">agentic AI workflows for first-contact outreach</span>, tripling campaign volume from 5 to 15 per quarter and reaching 4,300+ companies for the 2026 AI Summit pipeline. Deployed an AI-powered contact scoring system using Crunchbase, Apollo.io, and Claude Code to prioritize high-value leads — <span class="highlight">improving response rate from 3% to 5.6%</span> (above the 1-3% B2B benchmark).
                     </p>
 
                     <div class="journey-metrics">
                         <div class="metric-card">
-                            <div class="metric-value">v1.3</div>
-                            <div class="metric-label">SOP built from scratch</div>
+                            <div class="metric-value">3x</div>
+                            <div class="metric-label">Campaign volume growth</div>
                         </div>
                         <div class="metric-card">
-                            <div class="metric-value">5</div>
-                            <div class="metric-label">Quality gates designed</div>
+                            <div class="metric-value">4,300+</div>
+                            <div class="metric-label">Companies reached</div>
                         </div>
                         <div class="metric-card">
-                            <div class="metric-value">4</div>
-                            <div class="metric-label">Outreach pipelines</div>
+                            <div class="metric-value">5.6%</div>
+                            <div class="metric-label">Response rate (vs 1-3%)</div>
                         </div>
                         <div class="metric-card">
-                            <div class="metric-value">6+</div>
-                            <div class="metric-label">Interns managed</div>
+                            <div class="metric-value">10</div>
+                            <div class="metric-label">Team members managed</div>
                         </div>
                     </div>
 
                     <div class="journey-tags">
-                        <span class="journey-tag">Process Design</span>
+                        <span class="journey-tag">PMO Setup</span>
+                        <span class="journey-tag">Agentic AI</span>
                         <span class="journey-tag">SOP Development</span>
                         <span class="journey-tag">Crunchbase</span>
                         <span class="journey-tag">Apollo.io</span>
-                        <span class="journey-tag">Slack Lists</span>
+                        <span class="journey-tag">Claude Code</span>
                         <span class="journey-tag">Nonprofit</span>
                     </div>
                 </div>
@@ -2350,7 +3043,7 @@
                     <div class="journey-header">
                         <div>
                             <div class="journey-company">State Street Corporation</div>
-                            <div class="journey-role">Operations Manager, Cybersecurity GRC</div>
+                            <div class="journey-role">Project Manager, GRC Operations</div>
                         </div>
                         <div class="journey-meta">
                             <span class="journey-date">
@@ -2365,13 +3058,10 @@
                     </div>
 
                     <p class="journey-story">
-                        When I joined State Street's GRC team, the resource reconciliation process was <span class="highlight">ripe for automation</span>. Data scattered across multiple sources, no single source of truth, and manual work consuming 50+ hours every month. From day one, the team went out of their way to teach me everything they could. I did not want this to be a "just take" experience. I wanted to give something back.
+                        At State Street's $44 trillion custody bank, I developed the project charter, management plan, and schedule baseline for the GRC automation initiative. I migrated the Cybersecurity GRC Book of Work — <span class="highlight">100+ action items across 9 global teams</span> — from fragmented MS Project into Jira, structuring RAG status and KPIs that gave C-suite one-year visibility into prioritization decisions.
                     </p>
                     <p class="journey-story">
-                        So I pitched an idea to my manager in my <span class="highlight">first month</span>. Her response: "You can work on it, if you learn the daily operations first, make them your own, and do not let this distract from the core work." Fair deal. I mapped the entire process with flowcharts, found the inefficiencies, built a Kanban board to track both daily work and the automation features. I chose <span class="highlight">low-code over Python and SQL</span> because the real question was not "what is the most impressive solution?" but "what will still work after I leave?"
-                    </p>
-                    <p class="journey-story">
-                        The result: 93% reduction in manual effort. $48K annual savings. Completed ahead of schedule. Full documentation so it would not break after I left. The tool worked. But the <span class="highlight">trust we built together</span> is what made it possible.
+                        Built <span class="highlight">Copilot AI automation</span> to score GRC tasks by effort and outcome, cutting manual triage time by 20% and surfacing high-impact items for faster prioritization. Authored the GRC operations runbook unifying governance, risk, and compliance processes — published organization-wide on Confluence as the standard reference. Built a SharePoint documentation framework (SOPs, troubleshooting guides, RACI matrices, process flows) <span class="highlight">adopted as the onboarding standard</span> for new analysts.
                     </p>
 
                     <div class="journey-metrics">
@@ -2380,29 +3070,30 @@
                             <div class="metric-label">Manual effort eliminated</div>
                         </div>
                         <div class="metric-card">
-                            <div class="metric-value">$48K</div>
+                            <div class="metric-value">$150K</div>
                             <div class="metric-label">Annual savings</div>
                         </div>
                         <div class="metric-card">
-                            <div class="metric-value">70+</div>
-                            <div class="metric-label">Team members</div>
+                            <div class="metric-value">100+</div>
+                            <div class="metric-label">Action items migrated</div>
                         </div>
                         <div class="metric-card">
-                            <div class="metric-value">24+</div>
-                            <div class="metric-label">C-suite reviews</div>
+                            <div class="metric-value">20%</div>
+                            <div class="metric-label">Triage time cut (AI)</div>
                         </div>
                         <div class="metric-card">
-                            <div class="metric-value">$2M+</div>
-                            <div class="metric-label">Investment influenced</div>
+                            <div class="metric-value">9</div>
+                            <div class="metric-label">Global teams coordinated</div>
                         </div>
                     </div>
 
                     <div class="journey-tags">
                         <span class="journey-tag">Power Platform</span>
                         <span class="journey-tag">Jira Administration</span>
+                        <span class="journey-tag">Copilot AI</span>
                         <span class="journey-tag">GRC</span>
                         <span class="journey-tag">Change Management</span>
-                        <span class="journey-tag">Executive Communication</span>
+                        <span class="journey-tag">Confluence</span>
                         <span class="journey-tag">Agile</span>
                     </div>
                 </div>
@@ -2412,7 +3103,7 @@
                     <div class="journey-header">
                         <div>
                             <div class="journey-company">Researchwire Knowledge Solutions</div>
-                            <div class="journey-role">Project Manager</div>
+                            <div class="journey-role">Project Manager, IP Research</div>
                         </div>
                         <div class="journey-meta">
                             <span class="journey-date">
@@ -2427,13 +3118,10 @@
                     </div>
 
                     <p class="journey-story">
-                        This is where I learned to <span class="highlight">juggle without dropping</span>. Managing 8 to 12 concurrent projects with a combined budget of over $5M taught me that the hardest part of project management is not planning. It is prioritization. Deciding what gets your attention right now, and what can wait.
+                        I led the shift from waterfall to a <span class="highlight">Scrum-Agile hybrid</span>, embedding sprint planning and mid-cycle client feedback loops into the project roadmap — reducing end-of-project rework and accelerating time-to-deliverable by 30%. Ran kickoffs for 15+ clients (5 Fortune 100 accounts), defining scope, timelines, and budgets across a $5M+ portfolio.
                     </p>
                     <p class="journey-story">
-                        When I started, vendor on-time delivery was at 65%. I did not send threatening emails or escalate. I created <span class="highlight">clarity</span>: clear acceptance criteria before work began, QA checkpoints at 25%, 50%, and 75% instead of just at delivery, and I made vendors part of the solution instead of just executors. Delivery climbed to 92%. Most vendor problems are not vendor problems. They are communication problems.
-                    </p>
-                    <p class="journey-story">
-                        I also learned how to handle scope creep. By implementing a formal change control process and resolving inter-departmental conflicts early, I <span class="highlight">reduced scope creep by 45%</span> and boosted stakeholder satisfaction by 25%. The lesson: boundaries are not about saying no. They are about saying yes to the right things.
+                        Led a team of 5 patent analysts, delegating patent families by technical strength across 250-patent portfolios. <span class="highlight">Delivered 50+ projects and 250+ infringement analysis charts</span>, translating technical findings into strategic guidance for attorneys and non-technical stakeholders. Drove 20% ROI improvement and shaped product launch decisions for Fortune 100 clients.
                     </p>
 
                     <div class="journey-metrics">
@@ -2442,12 +3130,12 @@
                             <div class="metric-label">Portfolio managed</div>
                         </div>
                         <div class="metric-card">
-                            <div class="metric-value">65 to 92%</div>
-                            <div class="metric-label">Vendor delivery</div>
+                            <div class="metric-value">30%</div>
+                            <div class="metric-label">Faster delivery</div>
                         </div>
                         <div class="metric-card">
-                            <div class="metric-value">45%</div>
-                            <div class="metric-label">Scope creep reduced</div>
+                            <div class="metric-value">50+</div>
+                            <div class="metric-label">Projects delivered</div>
                         </div>
                         <div class="metric-card">
                             <div class="metric-value">20%</div>
@@ -2456,7 +3144,7 @@
                     </div>
 
                     <div class="journey-tags">
-                        <span class="journey-tag">Scrum</span>
+                        <span class="journey-tag">Scrum-Agile Hybrid</span>
                         <span class="journey-tag">Vendor Management</span>
                         <span class="journey-tag">Tableau</span>
                         <span class="journey-tag">Change Control</span>
@@ -2470,7 +3158,7 @@
                     <div class="journey-header">
                         <div>
                             <div class="journey-company">Tata Consultancy Services</div>
-                            <div class="journey-role">Systems Engineer</div>
+                            <div class="journey-role">Project Lead, Systems Engineer</div>
                         </div>
                         <div class="journey-meta">
                             <span class="journey-date">
@@ -2485,38 +3173,38 @@
                     </div>
 
                     <p class="journey-story">
-                        Where it all started. <span class="highlight">$100M+ in daily transactions</span> flowing through the banking applications I helped build and maintain. This is where I learned that systems thinking is not optional when real money is on the line. Every deployment decision, every sprint, every hotfix carried weight because downtime was not an inconvenience. It was a financial event.
+                        At India's largest IT services company ($29B), I was promoted to <span class="highlight">on-site Team Lead</span> at a major Indian private sector bank with remote support for 4 additional banks. Led 6 engineers across rosters, mentoring, quality, and client communication.
                     </p>
                     <p class="journey-story">
-                        I led a 6-person engineering team through the full software development lifecycle of mission-critical banking applications. I coached the team through Scrum adoption, increasing sprint velocity by 28%. I automated SQL-based reporting, cutting manual reporting by 96%. And I learned the most important lesson of my career: <span class="highlight">when the stakes are high, process is not bureaucracy. Process is protection.</span>
+                        Directed overnight SFMS updates across 5 banks for India's <span class="highlight">NEFT/RTGS 24x7 transition</span> under the RBI 2019 mandate, enabling round-the-clock settlement on a national banking platform processing $100M+ daily. Engineered Excel/VBA macros automating CSV-to-legacy SFMS report conversion, saving 2 hours daily. Applied <span class="highlight">5 Whys and Fishbone analysis</span> to lift CSAT 15% and cut repeat issues 35%, sustaining RBI compliance.
                     </p>
 
                     <div class="journey-metrics">
                         <div class="metric-card">
+                            <div class="metric-value">5</div>
+                            <div class="metric-label">Banks supported</div>
+                        </div>
+                        <div class="metric-card">
                             <div class="metric-value">$100M+</div>
-                            <div class="metric-label">Daily transactions</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value">28%</div>
-                            <div class="metric-label">Sprint velocity increase</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value">96%</div>
-                            <div class="metric-label">Manual reporting cut</div>
+                            <div class="metric-label">Daily settlement</div>
                         </div>
                         <div class="metric-card">
                             <div class="metric-value">15%</div>
                             <div class="metric-label">CSAT improvement</div>
                         </div>
+                        <div class="metric-card">
+                            <div class="metric-value">35%</div>
+                            <div class="metric-label">Repeat issues cut</div>
+                        </div>
                     </div>
 
                     <div class="journey-tags">
-                        <span class="journey-tag">Banking</span>
+                        <span class="journey-tag">Team Leadership</span>
                         <span class="journey-tag">SDLC</span>
-                        <span class="journey-tag">SQL</span>
-                        <span class="journey-tag">Java</span>
-                        <span class="journey-tag">Scrum Coaching</span>
-                        <span class="journey-tag">Regulatory Compliance</span>
+                        <span class="journey-tag">RBI Compliance</span>
+                        <span class="journey-tag">VBA Automation</span>
+                        <span class="journey-tag">5 Whys</span>
+                        <span class="journey-tag">Fishbone Analysis</span>
                     </div>
                 </div>
 
@@ -2544,13 +3232,13 @@
                         <div class="bar-chart" id="automationChart">
                             <div class="bar-group">
                                 <div class="bar before" data-height="180" style="height: 0px;">
-                                    <span class="bar-value">50+ hrs</span>
+                                    <span class="bar-value">40 hrs/mo</span>
                                 </div>
                                 <div class="bar-label">Before</div>
                             </div>
                             <div class="bar-group">
-                                <div class="bar" data-height="14" style="height: 0px;">
-                                    <span class="bar-value">~2 hrs</span>
+                                <div class="bar" data-height="22" style="height: 0px;">
+                                    <span class="bar-value">5 hrs/mo</span>
                                 </div>
                                 <div class="bar-label">After</div>
                             </div>
@@ -2588,27 +3276,27 @@
                     </div>
                 </div>
 
-                <!-- Vendor Delivery -->
+                <!-- Delivery Acceleration -->
                 <div class="impact-card reveal">
-                    <div class="impact-card-title">Vendor On-Time Delivery</div>
-                    <div class="impact-card-desc">Before and after implementing QA checkpoints at Researchwire</div>
+                    <div class="impact-card-title">Delivery Acceleration</div>
+                    <div class="impact-card-desc">Time-to-deliverable improvement after Scrum-Agile hybrid at Researchwire</div>
                     <div class="h-bar-chart" id="vendorChart">
                         <div class="h-bar-group">
                             <div class="h-bar-header">
-                                <span class="h-bar-label">Before (no checkpoints)</span>
-                                <span class="h-bar-value">65%</span>
+                                <span class="h-bar-label">Before (waterfall)</span>
+                                <span class="h-bar-value">100%</span>
                             </div>
                             <div class="h-bar-track">
-                                <div class="h-bar-fill" data-width="65"></div>
+                                <div class="h-bar-fill" data-width="100"></div>
                             </div>
                         </div>
                         <div class="h-bar-group">
                             <div class="h-bar-header">
-                                <span class="h-bar-label">After (QA at 25/50/75%)</span>
-                                <span class="h-bar-value">92%</span>
+                                <span class="h-bar-label">After (Scrum-Agile hybrid)</span>
+                                <span class="h-bar-value">70%</span>
                             </div>
                             <div class="h-bar-track">
-                                <div class="h-bar-fill" data-width="92"></div>
+                                <div class="h-bar-fill" data-width="70"></div>
                             </div>
                         </div>
                     </div>
@@ -2617,44 +3305,205 @@
                 <!-- Career Metrics Overview -->
                 <div class="impact-card reveal">
                     <div class="impact-card-title">Key Metrics Across Roles</div>
-                    <div class="impact-card-desc">Quantified outcomes spanning three organizations</div>
+                    <div class="impact-card-desc">Quantified outcomes spanning four organizations</div>
                     <div class="h-bar-chart" id="careerChart">
                         <div class="h-bar-group">
                             <div class="h-bar-header">
                                 <span class="h-bar-label">Delivery time improvement</span>
-                                <span class="h-bar-value">18%</span>
+                                <span class="h-bar-value">30%</span>
                             </div>
                             <div class="h-bar-track">
-                                <div class="h-bar-fill" data-width="18"></div>
+                                <div class="h-bar-fill" data-width="30"></div>
                             </div>
                         </div>
                         <div class="h-bar-group">
                             <div class="h-bar-header">
-                                <span class="h-bar-label">Sprint velocity increase</span>
-                                <span class="h-bar-value">28%</span>
+                                <span class="h-bar-label">Campaign volume growth (AI)</span>
+                                <span class="h-bar-value">3x</span>
                             </div>
                             <div class="h-bar-track">
-                                <div class="h-bar-fill" data-width="28"></div>
+                                <div class="h-bar-fill" data-width="75"></div>
                             </div>
                         </div>
                         <div class="h-bar-group">
                             <div class="h-bar-header">
-                                <span class="h-bar-label">Scope creep reduction</span>
-                                <span class="h-bar-value">45%</span>
+                                <span class="h-bar-label">Repeat issues reduction</span>
+                                <span class="h-bar-value">35%</span>
                             </div>
                             <div class="h-bar-track">
-                                <div class="h-bar-fill" data-width="45"></div>
+                                <div class="h-bar-fill" data-width="35"></div>
                             </div>
                         </div>
                         <div class="h-bar-group">
                             <div class="h-bar-header">
-                                <span class="h-bar-label">Team capability growth</span>
-                                <span class="h-bar-value">40%</span>
+                                <span class="h-bar-label">ROI improvement (clients)</span>
+                                <span class="h-bar-value">20%</span>
                             </div>
                             <div class="h-bar-track">
-                                <div class="h-bar-fill" data-width="40"></div>
+                                <div class="h-bar-fill" data-width="20"></div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ==================== PROJECTS ==================== -->
+    <section class="projects-section" id="projects">
+        <div class="section-container">
+            <span class="section-label reveal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                Projects
+            </span>
+            <h2 class="section-title reveal">Built to solve, documented to last.</h2>
+            <p class="section-desc reveal">Two projects that demonstrate my approach: identify the bottleneck, build the solution, leave documentation so it works after I leave the room.</p>
+
+            <div class="project-cards">
+
+                <!-- Project 1: GRC Automation -->
+                <div class="project-card reveal">
+                    <div class="project-header">
+                        <div>
+                            <span class="project-type">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                                Enterprise Automation
+                            </span>
+                            <h3 class="project-title">GRC Resource Reconciliation Automation</h3>
+                            <div class="project-org">State Street Corporation</div>
+                            <div class="project-date">2025</div>
+                        </div>
+                    </div>
+
+                    <p class="project-overview">
+                        Identified a <span class="highlight">40-hour/month manual reporting bottleneck</span> for the GRC team and C-suite. Led discovery on pain points, data structure, and data flow. Designed and built an end-to-end automation using Power Apps, Power Automate, Power BI, and Microsoft Lists — self-managed via Kanban and Agile cadence.
+                    </p>
+
+                    <div class="project-details-grid">
+                        <div class="project-detail-card">
+                            <div class="project-detail-label">Impact</div>
+                            <div class="project-detail-value">93% effort reduction (40 → 5 hrs/month)</div>
+                        </div>
+                        <div class="project-detail-card">
+                            <div class="project-detail-label">Annual Savings</div>
+                            <div class="project-detail-value">$150,000</div>
+                        </div>
+                        <div class="project-detail-card">
+                            <div class="project-detail-label">Tech Stack</div>
+                            <div class="project-detail-value">Power Apps · Power Automate · Power BI · Microsoft Lists</div>
+                        </div>
+                        <div class="project-detail-card">
+                            <div class="project-detail-label">Methodology</div>
+                            <div class="project-detail-value">Kanban + Agile cadence, self-managed</div>
+                        </div>
+                    </div>
+
+                    <div class="journey-tags">
+                        <span class="journey-tag">Low-Code</span>
+                        <span class="journey-tag">Power Platform</span>
+                        <span class="journey-tag">Process Automation</span>
+                        <span class="journey-tag">Documentation</span>
+                        <span class="journey-tag">Change Management</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: NovaTechX Capstone -->
+                <div class="project-card reveal">
+                    <div class="project-header">
+                        <div>
+                            <span class="project-type">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 6 3s3 0 6-3v-5"/></svg>
+                                Graduate Capstone
+                            </span>
+                            <h3 class="project-title">NovaTechX U.S. Market Entry Strategy</h3>
+                            <div class="project-org">Northeastern University · PJM 6910 Capstone</div>
+                            <div class="project-date">Sep 2025 - Dec 2025</div>
+                        </div>
+                    </div>
+
+                    <p class="project-overview">
+                        Served as <span class="highlight">Project Manager for a 6-person team</span> delivering a comprehensive U.S. market entry strategy to NovaTechX, an EdTech startup offering experiential learning programs. Authored the initial Integrated Project Plan (IPP) framework (v1.0) and served as Team Leader. Managed a $10,300 budget with 10-15% contingency reserve.
+                    </p>
+
+                    <div class="project-details-grid">
+                        <div class="project-detail-card">
+                            <div class="project-detail-label">Team Size</div>
+                            <div class="project-detail-value">6-person cross-functional team</div>
+                        </div>
+                        <div class="project-detail-card">
+                            <div class="project-detail-label">Budget</div>
+                            <div class="project-detail-value">$10,300 with contingency reserve</div>
+                        </div>
+                        <div class="project-detail-card">
+                            <div class="project-detail-label">Scope</div>
+                            <div class="project-detail-value">3 priority U.S. regions · 20+ university partnerships</div>
+                        </div>
+                        <div class="project-detail-card">
+                            <div class="project-detail-label">Target</div>
+                            <div class="project-detail-value">300 first-year student enrollments</div>
+                        </div>
+                    </div>
+
+                    <h4 style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px;">PM Knowledge Areas Covered</h4>
+
+                    <div class="pm-artifacts-grid">
+                        <div class="pm-artifact">
+                            <div class="pm-artifact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            </div>
+                            <div class="pm-artifact-name">Scope & WBS</div>
+                        </div>
+                        <div class="pm-artifact">
+                            <div class="pm-artifact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div class="pm-artifact-name">Schedule</div>
+                        </div>
+                        <div class="pm-artifact">
+                            <div class="pm-artifact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            </div>
+                            <div class="pm-artifact-name">Cost & Budget</div>
+                        </div>
+                        <div class="pm-artifact">
+                            <div class="pm-artifact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <div class="pm-artifact-name">RACI Matrix</div>
+                        </div>
+                        <div class="pm-artifact">
+                            <div class="pm-artifact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+                            </div>
+                            <div class="pm-artifact-name">Risk Register</div>
+                        </div>
+                        <div class="pm-artifact">
+                            <div class="pm-artifact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            </div>
+                            <div class="pm-artifact-name">Comms Plan</div>
+                        </div>
+                        <div class="pm-artifact">
+                            <div class="pm-artifact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+                            </div>
+                            <div class="pm-artifact-name">Quality Plan</div>
+                        </div>
+                        <div class="pm-artifact">
+                            <div class="pm-artifact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                            </div>
+                            <div class="pm-artifact-name">Change Control</div>
+                        </div>
+                    </div>
+
+                    <div class="journey-tags">
+                        <span class="journey-tag">Integrated Project Plan</span>
+                        <span class="journey-tag">WBS Dictionary</span>
+                        <span class="journey-tag">EMV Analysis</span>
+                        <span class="journey-tag">EdTech</span>
+                        <span class="journey-tag">Market Entry Strategy</span>
+                        <span class="journey-tag">Stakeholder Management</span>
                     </div>
                 </div>
 
@@ -2775,8 +3624,11 @@
                         <span class="toolkit-item">Scrum</span>
                         <span class="toolkit-item">Kanban</span>
                         <span class="toolkit-item">Waterfall</span>
-                        <span class="toolkit-item">SAFe</span>
+                        <span class="toolkit-item">Hybrid</span>
                         <span class="toolkit-item">SDLC</span>
+                        <span class="toolkit-item">5 Whys</span>
+                        <span class="toolkit-item">Fishbone Analysis</span>
+                        <span class="toolkit-item">Change Management</span>
                     </div>
                 </div>
 
@@ -2805,6 +3657,22 @@
                         <span class="toolkit-item">Regulatory Compliance</span>
                     </div>
                 </div>
+
+                <div class="toolkit-category reveal">
+                    <div class="toolkit-category-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/><circle cx="12" cy="15" r="2"/></svg>
+                    </div>
+                    <div class="toolkit-category-title">AI & LLM Tools</div>
+                    <div class="toolkit-items">
+                        <span class="toolkit-item">Claude</span>
+                        <span class="toolkit-item">ChatGPT</span>
+                        <span class="toolkit-item">Microsoft Copilot</span>
+                        <span class="toolkit-item">Gemini</span>
+                        <span class="toolkit-item">Google AI Studio</span>
+                        <span class="toolkit-item">GitHub Copilot</span>
+                        <span class="toolkit-item">OpenClaw</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -2819,7 +3687,7 @@
             <h2 class="section-title reveal">The engineer never left.</h2>
 
             <p class="ai-hero-statement reveal">
-                I started by wiring circuits and programming robots. Then I built banking systems processing millions daily. Then I automated GRC operations saving $48K a year. <span class="ai-accent">Now I am bringing AI into the same workflow, not as a buzzword, but as the next logical tool in the same problem-solving chain.</span>
+                I started by wiring circuits and programming robots. Then I built banking systems processing millions daily. Then I automated GRC operations saving $150K a year. <span class="ai-accent">Now I am bringing AI into the same workflow, not as a buzzword, but as the next logical tool in the same problem-solving chain.</span>
             </p>
 
             <!-- Evolution Timeline -->
@@ -3062,10 +3930,10 @@
                         <div class="gpa-ring">
                             <svg viewBox="0 0 200 200">
                                 <circle class="track" cx="100" cy="100" r="90"/>
-                                <circle class="fill" id="gpaFill" cx="100" cy="100" r="90" data-percent="97.5"/>
+                                <circle class="fill" id="gpaFill" cx="100" cy="100" r="90" data-percent="98.75"/>
                             </svg>
                             <div class="gpa-center">
-                                <div class="gpa-number">3.9</div>
+                                <div class="gpa-number">3.95</div>
                                 <div class="gpa-label">out of 4.0</div>
                             </div>
                         </div>
@@ -3140,6 +4008,14 @@
                         <div class="contact-card-value">@pranayslens</div>
                     </div>
                 </a>
+
+                <a href="#" class="contact-card" style="pointer-events: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                    <div class="contact-card-text">
+                        <div class="contact-card-label">Work Authorization</div>
+                        <div class="contact-card-value">F-1 OPT · STEM OPT Eligible · H-1B Sponsorship</div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -3172,6 +4048,30 @@
         const navLinks = document.getElementById('navLinks');
         mobileToggle.addEventListener('click', () => {
             navLinks.classList.toggle('open');
+        });
+
+        // ---- Dark mode toggle ----
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        // Check for saved preference, fallback to system preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            html.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            html.setAttribute('data-theme', 'dark');
+        }
+
+        // Add smooth transition class after initial load
+        setTimeout(() => {
+            document.body.style.transition = 'background 0.4s ease, color 0.4s ease';
+        }, 100);
+
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
         });
 
         // ---- Active nav link ----
